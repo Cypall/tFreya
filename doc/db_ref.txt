@@ -1,0 +1,145 @@
+==========================================================================
+==========================================================================
+ Freya Release 4.0 Database Reference
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+
+< Information >
+
+This documentation should include everything you need to know about the Freya databases.
+
+
+< Databases Documented >
+
+abra_db.txt		Abrakadabra Castable Skills Database
+attr_fix.txt		Attribute Fix Database
+castle_db.txt		War of Emperium Castles Database
+const.txt		Constants Enumeration Database
+create_arrow_db.txt	Arrow Creation Database
+exp.txt			Class Level Experience Database
+exp_guild.txt		Guild Level Experience Database
+
+To-Do: The rest of the databases..
+
+
+==========================================================================
+1. db/abra_db.txt -> Abrakadabra Castable Skills Database
+--------------------------------------------------------------------------
+
+<Skill_ID>,<Dummy_Name>,<Required_HocusPocus_Level>,<Rate>
+
+Skill_ID: The ID of the skill listed in the database.
+
+Dummy_Name: A skill name used to help users identify the skills easier. It's not read or used by the server, it's specifically for dev/player use.
+
+Required_HocusPocus_Level: This is the level of the Abrakadabra/Hocus Pocus skill required for the listed skill to have a chance to be activated.
+
+Rate: This is the chance rate for the skill to be selected out of the entire database. Be careful not to set this too low, because really low rates up the server's CPU usage.
+
+-> The Hocus Pocus/Abrakadabra skill picks a random skill to cast when it's activated. This database is used to list all the possible options for the skill.
+
+
+==========================================================================
+2. db/attr_fix.txt -> Attribute Fix Database
+--------------------------------------------------------------------------
+
+// Horizontal:Armor Element                          // Vertical:Attack Element
+
+1,10	// Level 1 Attribute Table
+//Netr Watr Erth Fire Wind Pois Hly  Shdw Sens Imor
+  100, 100, 100, 100, 100, 100, 100, 100,  25, 100,  // Normal
+  100,  25, 100, 150,  50, 100,  75, 100, 100, 100,  // Water
+  100, 100, 100,  50, 150, 100,  75, 100, 100, 100,  // Earth
+  100,  50, 150,  25, 100, 100,  75, 100, 100, 125,  // Fire
+  100, 175,  50, 100,  25, 100,  75, 100, 100, 100,  // Wind
+  100, 100, 125, 125, 125,   0,  75,  50, 100, -25,  // Poison
+  100, 100, 100, 100, 100, 100,   0, 125, 100, 150,  // Holy
+  100, 100, 100, 100, 100,  50, 125,   0, 100, -25,  // Shadow
+   25, 100, 100, 100, 100, 100,  75,  75, 125, 100,  // Sense (Ghost)
+  100, 100, 100, 100, 100,  50, 100,   0, 100,   0,  // Immortality (Undead)
+
+
+-> This database is a little messy, but it's easy to figure out. The vertical element comments on the right specify the type of element that's being used to attack, and the horizontal element comments up top specify the elemental armor type. You basically use this like a multiplication chart. Water vs Water is 25% normal damage, Undead vs Undead is 0 damage, etc. The first part of the table specifies the element level here: 1,10	// Lv1 Element table. There are 4 elemental levels with 4 corresponding tables.
+
+-> Also, make sure you stick to the database syntax on how all the spaces are done and such.
+
+
+==========================================================================
+3. db/castle_db.txt -> War of Emperium Castles Database
+--------------------------------------------------------------------------
+
+<Castle_ID>,<Map_Name>,<Castle_Name>,<Switch_Flag:(Reserved)>
+
+Castle_ID: The castle identifier. It's used by the server to sort out which castle is which.
+
+Map_Name: The map name that the castle area is located on.
+
+Castle_Name: This is the designated name of the castle which is shown by players in-game and during WoE for the specified castle ID/map name.
+
+Switch_Flag: Just set this to 1 if you modify the database.
+
+-> Note that if you add in extra castles, you'll still need to do a lot of modifying to the War of Emperium scripts, as well as add the necessary warps for the new castles.
+
+
+==========================================================================
+4. db/const.txt -> Constants Enumeration Database
+--------------------------------------------------------------------------
+
+<Constant>,<ID>,<Type>
+
+Constant: The words/text to be replaced in scripts.
+
+ID: The ID used in replacement of the constant.
+
+Type: Only used with values such as the 'BaseClass' script identifier, you don't have to normally specify it.
+
+-> This database is a tool for use with anything contained in {} brackets in the databases or scripts. In a script, say you see a line like this: jobchange,Job_Acolyte;. The Job_Acolyte string is filtered through the constants database for a match, and if there is a match, the Job_Acolyte string is replaced with it's corresponding ID. In this case that ID would be 4. Constants are used merely to simplify things for devs/users so they don't have to constantly keep looking up IDs. You can add in your own constants to the database and they'll work perfectly fine.
+
+
+==========================================================================
+5. db/create_arrow_db.txt -> Arrow Creation Database
+--------------------------------------------------------------------------
+
+<SourceID>,<Make_ID1>,<Make_Num1>,<Make_ID2>,<Make_Num2>,<Make_ID3>,<Make_Num3>,<Make_ID4>,<Make_Num4>,<Make_ID5>,<Make_Num5>
+
+SourceID: This is the item needed to create the specified Arrows.
+
+Make_ID: This is the Arrow ID created.
+
+Make_Num: This is the number of Arrows created based on the Make_ID value.
+
+-> The duplicate Make_ID and Make_Num fields will output more Arrows if you specify them. Adding them is optional, but you must have at least the first 3 parameters for your entry to work correctly.
+
+
+==========================================================================
+6. db/exp.txt -> Class Level Experience Database
+--------------------------------------------------------------------------
+
+<Novice-BaseExp>,<FirstClass-BaseExp>,<SecondClass-BaseExp>,<SuperNovice-BaseExp>,<HighNovice-BaseExp>,<HighFirstClass-BaseExp>,<HighSecondClass-BaseExp>,<Novice-JobExp>,<FirstClass-JobExp>,<SecondClass-JobExp>,<SuperNovice-JobExp>,<HighNovice-JobExp>,<HighFirstClass-JobExp>,<HighSecondClass-JobExp>,<StarGladiator-JobExp>,<GS/NJ-JobExp>
+
+
+-> This database is used for filtering out the required amount of experience per base level/job level for each class. Many of the classes have different experience formulas, so this database sorts it out.
+
+-> If you check the first row, you'll notice that the values match up to the syntax listed above perfectly: 9,9,9,9,10,10,10,10,30,144,30,11,60,288,27434,72. The first row is the amount of exp per class needed to get from Level 1 to Level 2. The second row is Level 2 to Level 3, and so forth.
+
+-> If you want to modify your server to have Base Levels over L99, or Job Levels over the max, you'll need to add additional rows into this database or they'll be stuck at Base Level 99, or max Job Level depending on the class.
+
+-> If you specify 0 for a parameter, the max level will stop there for that class.
+
+-> Make sure you don't remove the final row: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0. That row tells the server to stop at that level.
+
+
+==========================================================================
+7. db/exp_guild.txt -> Guild Level Experience Database
+--------------------------------------------------------------------------
+
+<Exp_Required>
+
+Exp_Required: The amount of experience needed for a guild to advance to the next level.
+
+-> The maximum guild level will be decided based on this database's contents. Normally this database goes up to level 50, with 49 values. You may modify it to go more or less by removing or adding values from it.
+
+
+==========================================================================
+ EOF
+--------------------------------------------------------------------------

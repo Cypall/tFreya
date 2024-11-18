@@ -1,0 +1,185 @@
+//--------------------------------------------------------------
+//               (c)2004-2007 Freya Team Presents:              
+//                 ___   ___    ___   _  _   __                 
+//                (  _) (  ,)  (  _) ( \/ ) (  )                
+//                (  _)  )  \   ) _)  \  /  /__\                
+//                (_)   (_)\_) (___) (__/  (_)(_)               
+//                    http://www.ro-freya.net                   
+//--------------------------------------------------------------
+// Script Title: Miscellaneous Warps	Author: A Lot of People
+//--------------------------------------------------------------
+// Revision History: v1.2
+//--------------------------------------------------------------
+//	1.0 First version [A Lot of People]
+//	1.1 Updated Kiel Hyre warps [Tsuyuki]
+//	1.2 Updated Kiel Hyre warps once again by L0ne_W0lf [Tsuyuki]
+//--------------------------------------------------------------
+// Additional Notes: * Official-certified *
+//--------------------------------------------------------------
+
+
+//--------------------------------------------------------------
+// Airship System Warps
+//--------------------------------------------------------------
+
+// Einbroch Airport
+einbroch.gat,92,280,0	warp	ein_ap01	1,1,airplane.gat,224,64
+einbroch.gat,64,234,0	warp	ein_ap02	1,1,airport.gat,138,51
+airport.gat,142,61,0	warp	ein_ap02a	1,1,einbroch.gat,62,246
+airport.gat,124,13,0	warp	ein_ap03	1,1,airport.gat,19,21
+airport.gat,19,18,0	warp	ein_ap03a	1,1,airport.gat,122,16
+airport.gat,161,13,0	warp	ein_ap04	1,1,airport.gat,47,21
+airport.gat,47,18,0	warp	ein_ap04a	1,1,airport.gat,163,16
+airport.gat,143,14,0	warp	ein_ap05	1,1,einbroch.gat,64,204
+einbroch.gat,64,207,0	warp	ein_ap05a	1,1,airport.gat,143,17
+
+// Lighthalzen Airport
+lhz_airport.gat,125,14,0	warp	lairp1	1,1,lhz_airport.gat,19,20
+lhz_airport.gat,19,18,0	warp	lairp1a	1,1,lhz_airport.gat,123,14
+lhz_airport.gat,160,14,0	warp	lairp2	1,1,lhz_airport.gat,48,20
+lhz_airport.gat,48,18,0	warp	lairp2a	1,1,lhz_airport.gat,162,14
+lighthalzen.gat,267,76,0	warp	lairp3	1,1,lhz_airport.gat,143,15
+lhz_airport.gat,143,13,0	warp	lairp3a	1,1,lighthalzen.gat,265,76
+lhz_airport.gat,143,63,0	warp	lairp4	1,1,lighthalzen.gat,296,76
+lighthalzen.gat,294,76,0	warp	lairp4a	1,1,lhz_airport.gat,143,60
+lighthalzen.gat,308,76,0	warp	lairp5	1,1,airplane.gat,224,64
+
+// Juno Airport
+y_airport.gat,125,14,0	warp	jairp1	1,1,y_airport.gat,19,20
+y_airport.gat,19,18,0	warp	jairp1a	1,1,y_airport.gat,123,14
+y_airport.gat,160,14,0	warp	jairp2	1,1,y_airport.gat,48,20
+y_airport.gat,48,18,0	warp	jairp2a	1,1,y_airport.gat,162,14
+yuno.gat,53,214,0	warp	jairp3	1,1,y_airport.gat,143,23
+y_airport.gat,143,16,0	warp	jairp3a	1,1,yuno.gat,52,207
+yuno.gat,52,238,0	warp	jairp4a	1,1,y_airport.gat,143,60
+yuno.gat,55,238,0	warp	jairp5a	1,1,y_airport.gat,143,60
+yuno.gat,8,261,0	warp	jairp6	1,1,airplane_01.gat,224,64
+yuno.gat,97,260,0	warp	jairp7	1,1,airplane.gat,224,64
+
+// Airplane #1 Warps
+airplane.gat,254,54,0	warp	air_1wp01	1,1,airplane.gat,91,67
+airplane.gat,87,67,0	warp	air_1wp01a	1,1,airplane.gat,250,54
+airplane.gat,208,53,0	warp	air_1wp02	1,1,airplane.gat,239,160
+airplane.gat,245,160,0	warp	air_1wp02a	1,1,airplane.gat,214,54
+
+// Airplane #2 Warps
+airplane_01.gat,254,54,0	warp	air_2wp01	1,1,airplane_01.gat,91,67
+airplane_01.gat,87,67,0	warp	air_2wp01a	1,1,airplane_01.gat,250,54
+airplane_01.gat,208,53,0	warp	air_2wp02	1,1,airplane_01.gat,239,160
+airplane_01.gat,245,160,0	warp	air_2wp02a	1,1,airplane_01.gat,214,54
+airplane_01.gat,104,199,0	warp	air_2wp03	1,1,airplane_01.gat,105,72
+airplane_01.gat,103,72,0	warp	air_2wp03a	1,1,airplane_01.gat,102,199
+airplane_01.gat,104,176,0	warp	air_2wp04	1,1,airplane_01.gat,105,52
+airplane_01.gat,103,52,0	warp	air_2wp04a	1,1,airplane_01.gat,102,176
+
+
+//--------------------------------------------------------------
+// Kiel Hyre Warps
+//--------------------------------------------------------------
+
+// Kiel Hyre School
+kh_school.gat,76,156,0	warp	kh_school_01	1,1,yuno_fild08.gat,155,189
+kh_school.gat,30,125,0	warp	kh_school_02a	1,1,kh_school.gat,67,14
+kh_school.gat,71,14,0	warp	kh_school_02b	1,1,kh_school.gat,36,125
+kh_school.gat,35,133,0	warp	kh_school_03a	1,1,kh_school.gat,148,16
+kh_school.gat,153,16,0	warp	kh_school_03b	1,1,kh_school.gat,39,136
+kh_school.gat,30,155,0	warp	kh_school_04a	1,1,kh_school.gat,182,116
+kh_school.gat,186,117,0	warp	kh_school_04b	1,1,kh_school.gat,35,155
+kh_school.gat,35,176,0	warp	kh_school_05a	1,1,kh_school.gat,148,56
+kh_school.gat,153,56,0	warp	kh_school_05b	1,1,kh_school.gat,40,176
+kh_school.gat,30,185,0	warp	kh_school_06a	1,1,kh_school.gat,67,74
+kh_school.gat,71,74,0	warp	kh_school_06b	1,1,kh_school.gat,35,184
+
+// Kiel Hyre Villa
+kh_vila.gat,79,11,0		warp	kh_vila_01	1,1,yuno_fild02.gat,92,208
+kh_vila.gat,71,38,0		warp	kh_vila_02a	1,1,kh_vila.gat,42,38
+kh_vila.gat,46,38,0		warp	kh_vila_02b	1,1,kh_vila.gat,75,38
+kh_vila.gat,71,54,0		warp	kh_vila_03a	1,1,kh_vila.gat,42,54
+kh_vila.gat,46,54,0		warp	kh_vila_03b	1,1,kh_vila.gat,75,54
+kh_vila.gat,34,66,0		warp	kh_vila_04a	1,1,kh_vila.gat,20,108
+kh_vila.gat,20,103,0	warp	kh_vila_04b	1,1,kh_vila.gat,34,61
+kh_vila.gat,84,66,0		warp	kh_vila_05a	1,1,kh_vila.gat,44,107
+kh_vila.gat,44,103,0	warp	kh_vila_05b	1,1,kh_vila.gat,84,62
+kh_vila.gat,32,128,0	warp	kh_vila_06a	1,1,kh_vila.gat,23,171
+kh_vila.gat,22,167,0	warp	kh_vila_06b	1,1,kh_vila.gat,32,123
+kh_vila.gat,90,47,0		warp	kh_vila_07a	1,1,kh_vila.gat,119,47
+kh_vila.gat,115,47,0	warp	kh_vila_07b	1,1,kh_vila.gat,85,47
+kh_vila.gat,126,75,0	warp	kh_vila_08a	1,1,kh_vila.gat,180,176
+kh_vila.gat,180,171,0	warp	kh_vila_08b	1,1,kh_vila.gat,126,70
+kh_vila.gat,175,71,0	warp	kh_vila_09	1,1,kh_vila.gat,136,64
+kh_vila.gat,191,19,0	warp	kh_vila_10	1,1,yuno_fild02.gat,74,215
+
+// Kiel Hyre Rossi
+kh_rossi.gat,15,92,0	warp	kh_rossi_01	1,1,yuno.gat,270,139
+kh_rossi.gat,35,87,0	warp	kh_rossi_02a	1,1,kh_rossi.gat,27,37
+kh_rossi.gat,27,42,0	warp	kh_rossi_02b	1,1,kh_rossi.gat,35,91
+kh_rossi.gat,63,87,0	warp	kh_rossi_03a	1,1,kh_rossi.gat,99,38
+kh_rossi.gat,99,42,0	warp	kh_rossi_03b	1,1,kh_rossi.gat,63,91
+kh_rossi.gat,90,87,0	warp	kh_rossi_04a	1,1,kh_rossi.gat,168,30
+kh_rossi.gat,168,34,0	warp	kh_rossi_04b	1,1,kh_rossi.gat,90,90
+kh_rossi.gat,35,98,0	warp	kh_rossi_05a	1,1,kh_rossi.gat,27,147
+kh_rossi.gat,27,143,0	warp	kh_rossi_01b	1,1,kh_rossi.gat,35,94
+kh_rossi.gat,90,101,0	warp	kh_rossi_06a	1,1,kh_rossi.gat,282,64
+kh_rossi.gat,42,26,0	warp	kh_rossi_06b	1,1,kh_rossi.gat,92,25
+kh_rossi.gat,87,25,0	warp	kh_rossi_07a	1,1,kh_rossi.gat,36,26
+kh_rossi.gat,282,60,0	warp	kh_rossi_07b	1,1,kh_rossi.gat,90,96
+kh_rossi.gat,222,68,0	warp	kh_rossi_08a	1,1,kh_rossi.gat,22,277
+kh_rossi.gat,22,273,0	warp	kh_rossi_08b	1,1,kh_rossi.gat,222,64
+kh_rossi.gat,248,68,0	warp	kh_rossi_09a	1,1,kh_rossi.gat,88,277
+kh_rossi.gat,88,273,0	warp	kh_rossi_09b	1,1,kh_rossi.gat,248,64
+kh_rossi.gat,222,25,0	warp	kh_rossi_10a	1,1,kh_rossi.gat,22,219
+kh_rossi.gat,22,222,0	warp	kh_rossi_10b	1,1,kh_rossi.gat,222,29
+kh_rossi.gat,248,25,0	warp	kh_rossi_11a	1,1,kh_rossi.gat,88,217
+kh_rossi.gat,88,222,0	warp	kh_rossi_11b	1,1,kh_rossi.gat,248,29
+kh_rossi.gat,259,46,0	warp	kh_rossi_12a	1,1,kh_rossi.gat,224,234
+kh_rossi.gat,228,234,0	warp	kh_rossi_12b	1,1,kh_rossi.gat,263,46
+kh_rossi.gat,220,231,0	warp	kh_rossi_13a	1,1,kh_rossi.gat,260,186
+kh_rossi.gat,260,190,0	warp	kh_rossi_13b	1,1,kh_rossi.gat,220,234
+kh_rossi.gat,204,231,0	warp	kh_rossi_14a	1,1,kh_rossi.gat,204,186
+kh_rossi.gat,204,190,0	warp	kh_rossi_14b	1,1,kh_rossi.gat,204,234
+kh_rossi.gat,188,231,0	warp	kh_rossi_15a	1,1,kh_rossi.gat,148,186
+kh_rossi.gat,148,190,0	warp	kh_rossi_15b	1,1,kh_rossi.gat,188,234
+kh_rossi.gat,188,238,0	warp	kh_rossi_16a	1,1,kh_rossi.gat,148,283
+kh_rossi.gat,148,279,0	warp	kh_rossi_16b	1,1,kh_rossi.gat,188,235
+kh_rossi.gat,204,238,0	warp	kh_rossi_17a	1,1,kh_rossi.gat,204,283
+kh_rossi.gat,204,279,0	warp	kh_rossi_17b	1,1,kh_rossi.gat,204,235
+kh_rossi.gat,220,238,0	warp	kh_rossi_18a	1,1,kh_rossi.gat,261,283
+kh_rossi.gat,260,279,0	warp	kh_rossi_18b	1,1,kh_rossi.gat,220,235
+
+// Kiel Hyre Mansion
+lighthalzen.gat,188,204,0	warp	kh_mansion_01a	1,1,kh_mansion.gat,84,49
+kh_mansion.gat,88,50,0	warp	kh_mansion_01b	1,1,lighthalzen.gat,188,199
+kh_mansion.gat,21,11,0	warp	kh_mansion_02	1,1,kh_mansion.gat,72,49
+
+
+//--------------------------------------------------------------
+// God Seal Quest Warps
+//--------------------------------------------------------------
+
+yuno.gat,218,180,0	warp	yuno_god01	1,1,que_god01.gat,99,84
+que_god01.gat,99,81,0	warp	god01_yuno	1,1,yuno.gat,218,177
+que_god01.gat,63,88,0	warp	god_sl_w0-1	1,1,que_god01.gat,87,92
+que_god01.gat,62,116,0	warp	god_sl_w1-1	1,1,que_god01.gat,46,94
+que_god01.gat,12,116,0	warp	god_sl_w2-1	1,1,que_god01.gat,16,94
+que_god01.gat,12,55,0	warp	god_sl_w3-1	1,1,que_god01.gat,17,83
+que_god01.gat,50,55,0	warp	god_sl_w4-1	1,1,que_god01.gat,47,83
+
+
+//--------------------------------------------------------------
+// The Sign Quest Warps
+//--------------------------------------------------------------
+
+cmd_in01.gat,17,34,0	warp	sign01	1,1,comodo.gat,187,164
+geffen.gat,140,99,0	warp	sign02	1,1,geffen_in.gat,165,52
+geffen_in.gat,165,54,0	warp	sign02a	1,1,geffen.gat,138,101
+himinn.gat,49,6,0	warp	sign03	1,1,gef_fild07.gat,179,241
+himinn.gat,49,67,0	warp	sign04	1,1,himinn.gat,49,75
+himinn.gat,49,73,0	warp	sign04a	1,1,himinn.gat,49,65
+um_in.gat,33,18,0	warp	sign05	1,1,um_in.gat,89,11
+um_in.gat,89,9,0	warp	sign05a	1,1,um_in.gat,33,16
+um_dun01.gat,132,90,0	warp	sign06	1,1,um_in.gat,12,18
+um_in.gat,10,18,0	warp	sign06a	1,1,um_dun01.gat,129,90
+que_sign01.gat,113,133,0	warp	sign07	1,1,nif_in.gat,117,173
+que_sign01.gat,45,15,0	warp	sign08	1,1,niflheim.gat,146,245
+que_sign02.gat,22,314,0	warp	sign09	1,1,niflheim.gat,30,156
+que_sign02.gat,379,235,0	warp	sign09a	1,1,que_sign01.gat,180,172

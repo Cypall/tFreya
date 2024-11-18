@@ -1,0 +1,1329 @@
+==========================================================================
+==========================================================================
+ Freya Release 4.0 Client Packet Reference
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+-> Translated part is outdated and badly formatted, but it's still pretty useful. Half of it is not yet translated (Japanese.)
+
+
+==========================================================================
+ Packet Length Table
+--------------------------------------------------------------------------
+
+   10,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+    0,  0,  0,  0, 55, 17,  3, 37,  46, -1, 23, -1,  3,108,  3,  2,
+    3, 28, 19, 11,  3, -1,  9,  5,  54, 53, 58, 60, 41,  2,  6,  6,
+    7,  3,  2,  2,  2,  5, 16, 12,  10,  7, 29, 23, -1, -1, -1,  0,
+    7, 22, 28,  2,  6, 30, -1, -1,   3, -1, -1,  5,  9, 17, 17,  6,
+   23,  6,  6, -1, -1, -1, -1,  8,   7,  6,  7,  4,  7,  0, -1,  6,
+    8,  8,  3,  3, -1,  6,  6, -1,   7,  6,  2,  5,  6, 44,  5,  3,
+    7,  2,  6,  8,  6,  7, -1, -1,  -1, -1,  3,  3,  6,  6,  2, 27,
+    3,  4,  4,  2, -1, -1,  3, -1,   6, 14,  3, -1, 28, 29, -1, -1,
+   30, 30, 26,  2,  6, 26,  3,  3,   8, 19,  5,  2,  3,  2,  2,  2,
+    3,  2,  6,  8, 21,  8,  8,  2,   2, 26,  3, -1,  6, 27, 30, 10,
+    2,  6,  6, 30, 79, 31, 10, 10,  -1, -1,  4,  6,  6,  2, 11, -1,
+   10, 39,  4, 10, 31, 35, 10, 18,   2, 13, 15, 20, 68,  2,  3, 16,
+    6, 14, -1, -1, 21,  8,  8,  8,   8,  8,  2,  2,  3,  4,  2, -1,
+    6, 86,  6, -1, -1,  7, -1,  6,   3, 16,  4,  4,  4,  6, 24, 26,
+   22, 14,  6, 10, 23, 19,  6, 39,   8,  9,  6, 27, -1,  2,  6,  6,
+  110,  6, -1, -1, -1, -1, -1,  6,  -1, 54, 66, 54, 90, 42,  6, 42,
+   -1, -1, -1, -1, -1, 30, -1,  3,  14,  3, 30, 10, 43, 14,186,182,
+   14, 30, 10,  3, -1,  6,106, -1,   4,  5,  4, -1,  6,  7, -1, -1,
+    6,  3,106, 10, 10, 34,  0,  6,   8,  4,  4,  4, 29, -1, 10,  6,
+   90, 86, 24,  6, 30,102,  9,  4,   8,  4, 14, 10, -1,  6,  2,  6,
+    3,  3, 35,  5, 11, 26, -1,  4,   4,  6, 10, 12,  6, -1,  4,  4,
+   11,  7, -1, 67, 12, 18,114,  6,   3,  6, 26, 26, 26, 26,  2,  3,
+    2, 14, 10, -1, 22, 22,  4,  2,  13, 97,  3,  9,  9, 30,  6, 28,
+    8, 14, 10, 35,  6, -1,  4, 11,  54, 53, 60,  2, -1, 47, 33,  6,
+   30,  8, 34, 14,  2,  6, 26,  2,  28, 81,  6, 10, 26,  2, -1, -1,
+   -1, -1, 20, 10, 32,  9, 34, 14,   2,  6, 48, 56, -1,  4,  5, 10,
+   26, -1, 26, 10, 18, 26, 11, 34,  14, 36, 10,  0,  0, -1, 32,  10,
+   22,  0, 26, 26, 42,  6,  6,  2,   2,282,282, 10, 10,  6,  6,  66,
+   10, -1,  6,  8, 10,  2,282, 18,  18, 15, 58, 57, 64,  5, 71,  5,
+   12, 26,  9, 11,  6, -1, 10,  2, 282, 11,  4, 36,  6,  6,  8,  2,
+   -1,  6, -1,  6,  6,  3,  4,  8,  -1,  3, 70,  4,  8, 12,  6, 10,
+    3, 34, -1,  3,  3,  5,  5,  8,   2,  3, -1,  6,  4,  6,  4,  6,
+    6, 11, 11, 11, 20, 20, 30,  4,   4,  4,  4,  4,  4,  4,  0,  2,
+    2, 40, 44, 30,  8,  0,  0, 84,   2,  2, -1, 14, 60, 62, -1,  8,
+   12,  4,284,  6, 14,  6,  4, -1,   6,  8, 18, -1, 46, 34,  4,  6,
+    4,  4,  2, 70, 10, -1, -1, -1,   8,  6, 27, 72, 66, -1, 11,  3,
+    0,  0,  8,  0,  0,  8,  0,  0,   0,  0,  4, 36,  6,  8,  0,  0,
+    0,  0,  0,  0,  0,  0,  0,  0,   0,  0,  0,  0,  0,  0,  0,  0,
+
+-> "-1" means a packet that have its packet length just after the packet number.
+
+
+==========================================================================
+ Packet Type Key
+--------------------------------------------------------------------------
+
+S -> Means a packet that will be sent from client.
+
+R -> Means a packet that will be received by client.
+
+B -> Means a byte.
+
+w -> Means word (2 bytes)
+
+l -> Means long word (4 bytes)
+
+* -> Means repeat
+
+
+==========================================================================
+ Packet Information
+--------------------------------------------------------------------------
+
+S 0064 <version>.l <account name>.24B <password>.24B <version2>.B
+	send account id & password
+S 0065 <account ID>.l <login ID1>.l <login ID2>.l ?.2B <sex>.B
+	request connection to character select server
+S 0066 <charactor number>.B
+	request to select character
+S 0067 <charactor name>.24B <param etc>.11B
+	request to create new character
+S 0068 <charactor ID>.l <mail address>.40B
+	request to delete character
+R 0069 <len>.w <login ID1>.l <account ID>.l <login ID2>.l ?.32B <sex>.B {<IP>.l <port>.w <server name>.20B <login users>.l ?.2B}.32B*
+	information about a success of login to login server
+R 006a <error No>.B
+	login¸”s
+	fail to login to login server
+R 006b <len>.w <charactor select data>.106B*
+	information about a success of connection to character select server & character server
+	<charactor select data> = <charactor ID>.l <base exp>.l <zeny>.l <job exp>.l <job level>.l ?.8B <option>.l <karma>.l <manner>.l ?.2B <HP>.w <MaxHP>.w <SP>.w <MaxSP>.w <speed>.w <class>.w <hair>.w <weapon>.2w <base level>.w <skill point>.w <head_bottom>.w <sheild>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <name>.24B <STR>.B <AGI>.B <VIT>.B <INT>.B <DEX>.B <LUK>.B <charactor number>.B ?.B
+R 006c <error No>.B
+	fail to select character
+R 006d <charactor select data>.106B
+	success to create new character
+R 006e <error No>.B
+	fail to create new character
+R 006f
+	success to delete character
+R 0070 <error No>.B
+	fail to delete character
+R 0071 <charactor ID>.l <map name>.16B <ip>.l <port>.w
+	success to select character & map name and ip/port number for game server
+S 0072 <account ID>.l <charactor ID>.l <login ID1>.l <login ID2>.l <sex>.b
+	request connection to game server
+R 0073 <server tick>.l <coordidate>.3B ?.2B
+	success to connect to game server & server time & spawn point
+R 0078 <ID>.l <speed>.w ?.w ?.w <option>.w <class>.w <hair>.w <weapon>.w <head option bottom>.w <sheild>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.w ?.w ?.w <manner>.w <karma>.w ?.B <sex>.B <X_Y_dir>.3B ?.B ?.B <sit>.B
+	a packet for map load or moving, infermation about a direction for character?
+R 0079 <ID>.l <speed>.w ?.w ?.w <option>.w <class>.w <hair>.w <weapon>.w <head option bottom>.w <sheild>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.w ?.w ?.w <manner>.w <karma>.w ?.B <sex>.B <X_Y_dir>.3B ?.B ?.B
+	information about characters in a range of a skill like teleport, no infor about direction for character?
+R 007b <ID>.l <speed>.w ?.w ?.w <option>.w <class>.w <hair>.w <weapon>.w <head option bottom>.w <server tick>.l <sheild>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.w ?.w ?.w <manner>.w <karma>.w ?.B <sex>.B <X_Y_X_Y>.5B ?.B ?.B ?.B
+	character information about walking in a range of the character can see
+R 007c <ID>.l <speed>.w ?.6w <class>.w ?.7w <X_Y>.3B ?.2B
+	character information for npc in a range the character can see
+S 007d
+	end of load
+S 007e <client tick>.l
+	send 1ms timer at client
+R 007f <server tick>.l
+	send 1ms timer at server
+R 0080 <ID>.l <type>.B
+	type=00 character disappear( walk out of screen. died and disappear?)
+	type=01 character died
+	type=02 character disappear( teleport, fly's wing, butterfly's wing, logout?)
+R 0081 <type>.B
+	type=03 speed hack
+	type=08 duplicated login
+S 0085 <X_Y>.3B
+	request to walk
+R 0087 <server tick>.l <X_Y_X_Y>.5B ?.B
+	response to the request to walk
+R 0088 <ID>.l <X>.w <Y>.w
+	stop walking
+S 0089 <target ID>.l <type>.B
+	type=00 hit target once
+	type=02 sit down
+	type=03 stand up
+	type=07 continue to hit target
+R 008a <src ID>.l <dst ID>.l <server tick>.l <src speed>.l <dst speed>.l <param1>.w <param2>.w <type>.B <param3>.w
+	type=00 param1=0 miss
+	type=00 param1:param1:damage(of total?) param2:number of division  param3:damage of assasin's left hand
+		if the attack was by npc, param2 and param3 are not used
+		speed match the aspd if it's player character
+	type=01 pick up item, unused data except ID*2
+	type=02 sit down, unused data except src ID
+	type=03 stand up, unused data except src ID
+	type=08 multiple attack
+	type=0a critical attack
+	type=0b perfect evade
+R 008c <len>.w <str>.?B
+	send normal speech. it become a speech for chat during a chat
+	client adds "<nick> : " part. 
+R 008d <len>.w <ID>.l <str>.?B
+	receive a speech by ID. it become speech for chat during a chat
+R 008e <len>.w <str>.?B
+	receive my character's speech. it become speech for chat during a chat
+S 0090 <ID>.l <type?>.B
+	talk to npc. i havent seen type setted to 01.
+R 0091 <map name>.16B <X>.w <Y>.w
+	map change in the same server, for instance, teleport, fly's wing...
+R 0092 <map name>.16B <X>.w <Y>.w <IP>.l <port>.w
+	map change to the other server
+R 0093
+	this packet observed in august once. i dont know what it is.
+S 0094 <ID>.l
+	request a character name for ID. 0095 or 0195 response is expected.
+R 0095 <ID>.l <nick>.24B
+	response for 0094 request from npc or player character without guild.
+	0193	request by <charID>.l
+	0194	get response by <charID>.l <name>.24B
+
+S 0096 <len>.w <nick>.24B <message>.?B
+	send wisper
+R 0097 <len>.w <nick>.24B <message>.?B
+	receive wisper
+R 0098 <type>.B
+	type=00 success to send wisper
+	type=01 target character is not loged in?
+	type=02 ignored by target
+R 009a <len>.w <message>.?B
+	GM announce
+S 009b <head dir>.w <dir>.B
+	request a change of head and body direction. no response to client.
+	dir can be 00-07 and it's for body direction. 00 means north and go counter-clockwise upto 07 by 45 degrees.
+	head dir can be 00,01,02. 00 means the same direction of body, 01 means right, 02 menas left.
+R 009c <ID>.l <head dir>.w <dir>.B
+	change body and head direction for ID.
+R 009d <ID>.l <item ID>.w <identify flag>.B <X>.w <Y>.w <amount>.w <subX>.B <subY>.B
+	when the item on the floor will appear on the screen by walking etc.
+R 009e <ID>.l <item ID>.w <identify flag>.B <X>.w <Y>.w <subX>.B <subY>.B <amount>.w
+	item drop. coordinate and amount is different from 009d.
+S 009f <ID>.l
+	pick up item on the floor.
+R 00a0 <index>.w <amount>.w <item ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w <equip type>.w <type>.B <fail>.B
+	fail=02 fail to pick up?
+	fail=06 no right to pick up. fail to pick up.
+R 00a1 <ID>.l
+	disappear the floor item
+S 00a2 <index>.w <amount>.w
+	drop inventory item.
+R 00a3 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B}.10B*
+	list of consumptive item and collecter item that you have
+R 00a4 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <equip type>.w <equip point>.w <attribute?>.B <refine>.B <card>.4w}.20B*
+	list of equipments that you have
+R 00a5 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B}.10B*
+	list of consumptive item and collecter item that you leave with Kafra.
+R 00a6 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <equip type>.w <equip point>.w <attribute?>.B <refine>.B <card>.4w}.20B*
+	list of equipments that you leave with Kafra.
+S 00a7 <index>.w <ID>.l
+	use index item. ID can be only myself?
+R 00a8 <index>.w <amount>.w <type>.B
+	response to use item. type=00 means failed. amount is unused.
+	type=01 means success to use item, amount is a number of rest of the item.
+S 00a9 <index>.w <equip type>.w
+	equip item.
+R 00aa <index>.w <equip point>.w <type>.B
+	response to equip item. type=00 means fail. equip point is unused.
+S 00ab <index>.w
+	take off equipment.
+R 00ac <index>.w <equip point>.w <type>.B
+	response to take off equipment. type=00 means fail? equip point is unused.
+R 00af <index>.w <amount>.w
+	decrease number of item by amount.
+R 00b0 <type>.w <val>.l
+	update values of various status.
+	0000:speed 0003:carma 0004:manner point 0005:HP 0006: MaxHP
+	0007:SP 0008:MaxSP 0009:status point 000b: base level
+	000c:skil point 0018:weight(this number must be 10 times greater than it's been diplayed.)
+	0019:max weight(this number must be 10 times greater than it's been diplayed.)
+	0029:attack in front 002a:attack in back 002b:matk in front 002c:matk in back
+	002d:deffence in front 002e:deffence in back 002f:mdef in front 0030:mdef in back
+	0031:hit 0032:flee in front 0033:flee in back 0034: critical
+	0035:aspd(time by 2ms?) 0037:job level
+	0082:unknown. is it the same number as atk in back?
+R 00b1 <type>.w <val>.l
+	update valies of various status. below is the list of corresponding type and value.
+	0001:base experience 0002:job experience 0014:zeny
+	0016:base experience that needed to level up 0017:job experience that needed to level up
+	in beta1, value of 00b0 was short and value of 00b1 was long,
+	but not there are no difference. 
+S 00b2 <type>.B
+	type=00 restart game when character died
+	type=01 request character select
+R 00b3 <type>.B
+	type=01 response to character select
+R 00b4 <len>.w <ID>.l <str>.?B
+	message from npc id
+R 00b5 <ID>.l
+	display the "NEXT" icon to npc message window
+R 00b6 <ID>.l
+	display the "CLOSE" icon to npc message window
+R 00b7 <len>.w <ID>.l <str>.?B
+	display select options in npc message window. each options devided by ":".
+S 00b8 <ID>.l <select>.B
+	select options in ncp message window. number starts from 1 for each options. cancel for ff?
+S 00b9 <ID>.l
+	"NEXT" button clicked in ncp message window.
+S 00bb <type>.w <amount>.B
+	request update status. type can be 000d for STR, 000e for AGI, 000f for VIT, 0010 for INT, 0011 for DEX, 0012 for LUK.
+R 00bc <type>.w <fail>.B <val>.B
+	respnse to update status. it's successeeded if fail=01. type is the same value as packet number 00bb. val is a value of increase.
+	it's unknown when it's failed because i havent ever seen. i think it will be fail=00 when it's failed.
+R 00bd <status point>.w <STR>.B <STRupP>.B <AGI>.B <AGIupP>.B <VIT>.B <VITupP>.B <INT>.B <INTupP>.B <DEX>.B <DEXupP>.B <LUK>.B <LUKupP>.B <ATK>.w <ATKbonus>.w <MATKmax>.w <MATKmin>.w <DEF>.w <DEFbonus>.w <MDEF>.w <MDEFbonus>.w <HIT>.w <FLEE>.w <FLEEbonus>.w <critical>.w ?.w
+	packet of information for various status.
+R 00be <type>.w <val>.B
+	packet to update required status point. type can be 0020-0025 for STR-LUK.( see packet number 00bb for detals.)
+S 00bf <type>.B
+	display emotion. type can be 00-0c(,0d) for ALT+1-ALT+9,ALT+0,CTRL+-,CTRL++,CTRL+\(,korean flag).
+R 00c0 <ID>.l <type>.B
+	emotion by ID. type is the same as 00bf.
+S 00c1
+	request to ask loged in people.
+R 00c2 <val>.l
+	response to asking loged in people.
+R 00c3 <ID>.l <type>.B <val>.B
+	change looks. type=00 means body(by jobs), 02 is weapon, 03 is head(lower), 04 is head(upper), 05 is head(middle), 08 is shield.
+R 00c4 <ID>.l
+	display "BUY" or "SELL" window by npc ID
+S 00c5 <ID>.l <type>.B
+	select "BUY" or "SELL". type=00 is buy, type=01 is sell.
+R 00c6 <len>.w {<value>.l <DCvalue>.l <type>.B <item ID>.w}.11B*
+	list of marchandizes when clicked "BUY". DCvalue is a value of Discount Skill applied.
+R 00c7 <len>.w {<index>.w <value>.l <OCvalue>.l}.10B*
+	list of items when clicked "SELL". OCvalue is a value of Over Charge Skill applied.
+S 00c8 <len>.w {<amount>.w <item ID>.w}.4B*
+	buy item from npc shop.
+S 00c9 <>.w {<index>.w <amount>.w}.4B*
+	sell item to npc shop.
+R 00ca <type>.B
+	response for buying item. type=00 meanse successetion.
+R 00cb <type>.B
+	response for selling item. type=00 means success.
+S 00cf <nick>.24B <type>.B
+	type=00 deny speech from nick(/ex nick).
+	type=01 allow speech from nick(/in nick)
+S 00d0 <type>.B
+	type=00 deny all speech(/exall)
+	type=01 allow all speech(/inall)
+R 00d1 <type>.B <fail>.B
+	fail=00 success to deny speech
+	fail=01 fail to deny speech
+R 00d2 <type>.B <fail>.B
+	fail=00 success to allow speech
+	fail=01 fail to alloe speech
+S 00d5 <len>.w <limit>.w <pub>.B <passwd>.8B <title>.?B
+	create chat room.(from now on, im not sure for packets about chat.)
+R 00d6 <fail>.B
+	response to create chat room.
+R 00d7 <len>.w <owner ID>.l <chat ID>.l <limit>.w <users>.w <pub>.B <title>.?B
+	information for chat room in the screen.
+R 00d8 <chat ID>.l
+	delete chat room.
+S 00d9 <chat ID>.l <passwd>.8B
+	request to join the chat.
+R 00da <fail>.B
+	fail to join the chat.
+R 00db <len>.w <chat ID>.l {<index>.l <nick>.24B}.28B*
+	list of people in the chat room.
+R 00dc <users>.w <nick>.24B
+	add person to the chat room.
+R 00dd <index>.w <nick>.24B <fail>.B
+	leave the chat room.
+S 00de <len>.w <limit>.w <pub>.B <passwd>.8B <title>.?B
+	change chat room status.
+R 00df <len>.w <owner ID>.l <chat ID>.l <limit>.w <users>.w <pub>.B <title>.?B
+	success to change chat room status.
+S 00e0 ?.l <nick>.24B
+	request to change owner of the chat room?
+R 00e1 <index>.l <nick>.24B
+	re-number people in the chat room?
+S 00e2 <nick>.24B
+	kick nick from chat room.
+S 00e3
+	leave chat room.
+S 00e4 <ID>.l
+	request trade.
+R 00e5 <nick>.24B
+	recieve a request to trade.
+S 00e6 <type>.B
+	type=03 trade ok.
+	type=04 trade canceled.
+R 00e7 <fail>.B
+	response to requesting trade.
+	fail=00 too far.
+	fail=03 allowed the trade.
+	fail=04 trade canceled?
+S 00e8 <index>.w <amount>.l
+	add item. index=0 means adding zeny. for official client, zeny can be added only in packet number 00eb.
+R 00e9 <amount>.l <type ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w
+	added item from other character.
+R 00ea <index>.w <fail>.B
+	fail=00 success to add item.
+	fail=01 fail to add item. the player was over weighted.
+S 00eb
+	completed adding item.(cliecked OK)
+R 00ec <fail>.B
+	fail=00 recieved "OK" from myself
+	fail=01 recieved "OK" from the other.
+S 00ed
+	trade canceled.
+R 00ee
+	message of "trade canceled"
+S 00ef
+	trade OKed. (cliecked Trade)
+R 00f0
+	trade completed.
+R 00f2 <num>.w <limit>.w
+	number of item that Kafra can stock and number of item that Kafra stocks now.
+S 00f3 <index>.w <amount>.l
+	put item to Kafra's warehouse.
+R 00f4 <index>.w <amount>.l <type ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w
+	add item to Kafra's warehouse.
+S 00f5 <index>.w <amount>.l
+	take out item from Kafra's warehouse.
+R 00f6 <index>.w <amount>.l
+	delete item in the Kafra's warehouse.
+S 00f7
+	request to close Kafra's warehouse.
+R 00f8
+	response to close Kafra's warehouse.
+S 00f9 <party name>.24B
+	create party.
+R 00fa <fail>.B
+	fail=00 success to create party.
+R 00fb <len>.w <party name>.24B {<ID>.l <nick>.24B <map name>.16B <leader>.B <offline>.B}.46B*
+	packet for various information about party.
+S 00fc <ID>.l
+	invate player to the party.
+R 00fd <nick>.24B <fail>.B
+	fail=00 the player is already in other party.
+	fail=01 invitaion was denied.
+	fail=02 success to invite,
+R 00fe <ID>.l <party name>.24B
+	invited to party.
+S 00ff <ID>.l <fail>.l
+	response when player was invited to party. fail=1 means OK?
+R 0100
+	unknown. related to party?
+S 0101 <exp>.w <item?>.w
+	change party setting.
+R 0102 <exp>.w <item?>.w
+	party setting status. when exp=2, fail to set "equality for experience"?
+R 0104 <ID>.l ?.l <X>.w <Y>.w <offline>.B <party name>.24B <nick>.24B <map name>.16B
+	information about a one player in th party.
+R 0105 <ID>.l <nick>.24B <fail>.B
+	nick leaves the party.
+R 0106 <ID>,l <HP>.w <MaxHP>.w
+	update HP of party members.
+R 0107 <ID>.l <X>.w <Y>.w
+	update coordinates of party members.
+S 0108 <len>.w <message>.?B
+	send speech for party memebers.
+R 0109 <len>.w <ID>.l <message>.?B
+	receive speech for party memebers.
+R 010a <type ID>.w
+	get MVP item.
+R 010b <exp>.l
+	get MVP experience.
+R 010c <ID>.l
+	display MVP character.
+R 010e <skill ID>.w <lv>.w <sp>.w <range>.w <up>.B
+	update skill sinformation. sp is unused?
+R 010f <len>.w {<skill ID>.w <target type>.w ?.w <lv>.w <sp>.w <range>.w <skill name>.24B <up>.B}.37B*
+	bunch of information about skill. some of skill name is not send (AL_PNEUMA, PR_SLOWPOISON etc).
+	target type is 0 for novice skill, 1 for enemy, 2 for place, 4 for immediate invoke, 16 for party member
+	it will not be on list when lv=0 up=0?
+R 0110 <skill ID>.w <basic type>.w ?.w <fail>.B <type>.B
+	fail to use skill when fail=00?
+	type 00:basic type‚Ì•û 01:SP•s‘« 02:HP•s‘« 03:memo–³‚µ 04:delay’†
+	type 00:basic type 01:lack of SP, 02:lack of HP, 03:no memo, 04:in delay
+	05:lack of money, 06:weapon does not satisfy, 07:no red jewel, 08:no blue jewel, 09:unkown
+	basic type 00:trade 01:emotion 02:sit down, 03:chat, 04:party
+	05:shout? 06:PK, 07:manner point
+R 0111 <skill ID>.w <target type>.w ?.w <lv>.w <sp>.w <range>.w <skill name>.24B <up>.B
+	just one skill information. not used in beta2?
+S 0112 <skill ID>.w
+	request to skill level up.
+S 0113 <level>.w <skill ID>.w <ID>.l
+	use skill to the target.
+R 0114 <skill ID>.w <src ID>.l <dst ID>.l <server tick>.l <src speed>.l <dst speed>.l <param1>.w <param2>.w <param3>.w <type>.B
+	skill effect for attack.
+	rtpe=04 observed when firewall was used. is that the almost same as type=06?
+	type=06 skill for just one hit? param1 is total damage, param2 is level, param3 will always stay 1.
+	type=08 skill for multiple hits? param1 is totak damage, param2 is level, param3 will be a number of hit.
+R 0115 <skill ID>.w <src ID>.l <dst ID>.l <server tick>.l <src speed>.l <dst speed>.l <X>.w <Y>.w <param1>.w <param2>.w <param3>.w <type>.B
+	blow up type skill effect.
+	type=05 damage and blow up. param1 is total damage, param2 is level, param3 will be a number of hit.
+	type=06 a point of explorsion? param1 is unused at least.
+S 0116 <level>.w <skill ID>.w <X>.w <Y>.w
+	use skill at (X,Y).
+R 0117 <skill ID>.w <src ID>.l <val>.w <X>.w <Y>.w <server tick>.l
+	display skill effect at (X,Y). is val level? or how hard it is (like ice wall)?
+S 0118
+	cancel to attack
+R 0119 <ID>.l <param1>.w <param2>.w <param3>.w ?.B
+	Change look.
+	param1=02 Frost Diver
+	param2=01 Poison
+	param2=20 Angelus
+	param3-01 Sight or Ruwach
+	param3=0b Hiding
+	param3-0b Cloaking
+	param3=0d Cart
+	param3-0e Falcon
+	param3=0f Peco Peco
+
+R 011a <skill ID>.w <val>.w <dst ID>.l <src ID>.l <fail>.B
+	display no-damage skill effect. val is an amount of HP cured when it's heal.
+	fail=00 must mean fail, but i havent seend it except steal.
+S 011b <skill ID>.w <map name>.16B
+	response to packet number 011c. send "cancel" for no-use.
+R 011c <skill ID>.w <map1>.16B <map2>.16B <map3>.16B <map4>.16B
+	select place for teleport or portal warp.
+	in case of teleport, Ramdom/save point will be sent,
+	in case of portal warp, save point/memo1/memo2/memo3 will be sent.
+	only map name wil be sent.
+S 011d
+	request to take a memo at this point.
+R 011e <fail>.B
+			success to take memo.
+			fail to take memo.
+R 011f <dst ID>.l <src ID>.l <X>.w <Y>.w <type>.B <fail>.B
+	create ground effect for skills like firewall.
+	type 7e:SW, 7f:firewall, 80:portal warp(invoking), 81:portal warp(before invoking), 83:sank, 85:funewma( i really don know skill names :()
+	86: bermillion, 8c:talky box(invoked), 8d:frost diva, 8e:kuagumire, 91:uncle snear
+	93:land mine, 97:??, 99:talky box(befor invoked)
+R 0120 <ID>.l
+	delete ground effect.
+R 0121 <num>.w <num limit>.w <weight>.l <weight limit>l
+	kind of cart, weight and max weight.
+R 0122 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <equip type>.w <equip point>.w <attribute?>.B <refine>.B <card>.4w}.20B*
+	equipments in cart.
+R 0123 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B}.10B*
+	cunsumptive and collector items in cart.
+R 0124 <index>.w <amount>.l <item ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w
+	add item to cart.
+R 0125 <index>.w <amount>.l
+	delete item in cart.
+S 0126 <index>.w <amount>.l
+	put item to cart.
+S 0127 <index>.w <amount>.l
+	take out item from cart.
+S 0128 <index>.w <amount>.l
+	move item from Kafra's warehouse to cart.
+S 0129 <index>.w <amount>.l
+	move item from cart to Kafra's warehouse.
+R 012c <fail>.B
+	fail=00 over the weight and could not add item to cart.
+R 012d <num>.w
+	create shop (Merchant skill). request item list. num is a number of kind of item that can be sell.
+S 012e
+	close shop.
+S 012f <len>.w <message>.80B {<index>.w <amount>.w <value>.l}.8B*
+	create shop, shop name, item, price list.
+S 0130 <ID>.l
+	request item list for shop( not npc shop).
+R 0131 <ID>.l <message>.80B
+	display shop name tag.
+R 0132 <ID>.l
+	delete shop name tag.
+R 0133 <len>.w <ID>.l {<value>.l <amount>.w <index>.w <type>.B <item ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w}.22B
+	item list for shop(not npc shop).
+S 0134 <len>.w <ID>.l {<amount>.w <index>.w}.4B*
+	buy item from shop (not npc).
+R 0135 <index>.w <amount>.w <fail>.B
+	fail to buy item from non npc shop. fail tells you reasons.
+R 0136 <len>.w <ID>.l {<value>.l <index>.w <amount>.w <type>.B <item ID>.w <identify flag>.B <attribute?>.B <refine>.B <card>.4w}.22B*
+	success to create non-npc-shop.
+R 0137 <index>.w <amount>.w
+	report of selling item.
+R 0139 <ID>.l <X>.w <Y>.w <X2>.w <Y2>.w <range>.w
+	the enemy at(X,Y) was too far to attack from my coordinate (X2,Y2).
+	possible range to attack enemy is "range", so be closer?
+R 013a <val>.w
+	attack range.
+R 013b <type>.w
+	various message. 3="arrow has been equiped"
+R 013c <ID>.w
+	item id of equiped arrow. 0 means no arrow is equiped.
+R 013d <type>.w <val>.w
+	recovery of HP/SP by HP/SP recovery skill.
+	type=5 is HP, type=7 is SP.
+R 013c <index>.w
+	id of equiped arrow.
+
+R 013e <src ID>.l <dst ID>.l <X>.w <Y>.w <lv?>.w ?.w <wait>.l
+	skill has been casting. (X,Y) will be 0 when target is player character or NPC. dst ID will be 0 when target is place.
+
+	offset+16(dword) in packet number 0x013e is skill attribute.
+
+	00:Neutral, 01:Water, 02:Earth, 03:Fire, 04:Wind, 05:Poison, 06:Holy, 07:Dark, 08:Ghost, 09:Undead
+
+	Casting effect might differ by skill attribute in the future.
+
+	Wait in milliseconds?
+R 0141 <type>.l <base>.l <bonus>.l
+	information for status. type is 0d-12 for STR,AGI,VIT,INT,DEX,LUK.
+	base+bonus will be displayed.
+R 0144 <ID>.l <type>.l <X>.l <Y>.l <point ID>.B <color>.3B ?.B
+	for guid npc, packet for display icon on map.
+	type=1 display icon.
+	type=2 delete icon.
+R 0145 <file name>.16B <type>.B
+	display Kafra picture(at this time).
+	type=02 display.
+	type=ff delete.
+S 0146 <ID>.l
+	talk to npc with ID. Clicked CLOSE button.
+R 0147 <skill ID>.w <target type>.w ?.w <lv>.w <sp>.w <range>.w <skill name>.24B <up>.B
+	effect for skill by using item.
+S 0148 <ID>.l
+	decide target of a skill Ressurection? in beta1.
+S 0149 <ID>.l <type>.B
+	give manner point to ID. type=00 is plus, type=01 is minus.
+S 0149 <ID>.l <type>.B <time>.w
+	use special right click menu for GM "decrease prohibited time to create chat room". type=00
+	use special right click menu for GM "increase prohibited time to create chat room". type=01
+	unit is minute (maybe)
+
+R 014a <fail>.l
+	result of giving manner point. fail=0 is success, fail=1 is fail.
+R 014b <type>.B <nick>.24B
+	get manner point. type=00 is plus, type-01 is minus.
+R 014C <len>.w (<type>.l <guildID>.l <guild name>.24B).*
+	display alliance and opposition guild.
+	type=0 alliance.
+	type=1 opposition.
+S 014D
+		start of guild information?
+R 014E <type?>.l
+					normal guild member.
+					guild master.
+S 014F <page>.l
+		send packet for guild "DISPLAY" tab.
+R 0150 <guildID>.l <guildLv>.l <connum>.l <’èˆõ>.l <Avl.lvl>.l ?.l <next_exp>.l ?.16B <guild name>.24B <guild master>.24B ?.16B
+	guild info.
+S 0151 <guild ID>.l
+	request for guild emblem.
+R 0152 <len>.w <guild ID>.l <emblem ID?>.l <emblem data>.?B
+	return emblem image.
+R 0154 <len>.w {<accID>.l <charactorID>.l <”¯Œ^>.w <”¯‚ÌF>.w <«•ÊH>.w <job>.w <lvl?>.w <ã”[ŒoŒ±’l>.l <online>.l <Position>.l ?.50B <nick>.24B}*
+	guild member list?
+S 0159 <guildID>.l <accID>.l <charID>.l <mess>.40B
+	send packet for leaving guild.
+R 015A <nic>.24B <mess>.40B
+	receive packet for leaving guild(all members).
+S 015B <guildID>.l <accID>.l <charID>.l <mess>.40B
+	send packet for kicking member out of the guild.
+R 015C <nick>.24B <mess>.40B <ƒAƒJƒEƒ“ƒg‚h‚c>.24B
+	receive packet for kicking member out of the guild.(all member)
+R 0163 <len>.w <nick>.24B <accountID>.24B <kicking reason>.40B
+
+S 0165 <myaccID>.l <guild name>.24B
+	create guild
+R 0166 <len>.w ?.28B*
+	list for roll of members?
+R 0167 <type>.b
+	response to creating guild.
+	type = 0 success.
+	type = 2 “¯–¼‚ÌƒMƒ‹ƒh‚ª‚ ‚é
+				there is a guild with the same name.
+S 0168 <TargetAccID>.l <sourceAccID>.l <myCharactorID>.l
+	invite to the guild.
+R 0169 <type>.B
+	invitation denied.
+R 016A <guild ID>.l <guild name>.24B
+	invited to the guild.
+S 016B <guild ID>.l <type>.l
+	response to invitaion for joining to guild.
+	type=0 deny.
+	type=1 OK.
+R 016c <guild ID>.l ?.13B <guild name>.24B
+	guild information when loged in.
+R 016d <ID>.l <charactor ID>.l <online>.l
+	information about guild member logged in or logged out etc.
+R 016f <message>.180B
+	guild message?
+S 016E <guildID>.l <mess1>.60B <mess2>.120B
+	set guild announcement.
+R 016F <mess1>.60B <mess2>.120B
+	guild announcement.
+S 0170 <TargetAccID>.l <sourceAccID>.l <myCharactorID>.l
+	invite the guild to be alliance.
+R 0171 <SorceAccID>.l <guild name>.24B
+	invited to be a alliance.
+S 0172 <SorceAccID>.l <type>.l
+	response for invitiation to be alliance.
+	type=0 deny.
+	type=1 OK.
+R 0173 <type>.B
+	type = 0 the guild is already alliance.
+	type = 1 denied to be alliance.
+	type = 2 success to invite to be alliance.
+R 0177 <len>.w <index>.w*
+	list of items that need to be judge(i mean unknown items.)
+S 0178 <index>.w
+	judge item.
+R 0179 <index>.w <fail>.B
+	response to judging item. fail=00 is success. is there fail=01?
+S 017A <index>.w
+	card is double clicked.
+R 017B <len>.w {<index>.w}*
+	item index number for items that can be inserted card.
+S 017C <SrcIndex>.w <DescIndex>.w
+	insert Src to Desc.
+R 017D <DescIndex>.w <SrcIndex>.w <fail>.b
+	response to insert Src to Desc. fail=0 is success, fail=01 is fail?
+S 017e <len>.w <message>.?B
+	send speach for guild members.
+R 017f <len>.w <message>.?B
+	receive guild message.
+R 0182 <accID>.l <charactorID>.l <hair type>.w <hair color>.w <sex?>.w <job>.w <lvl?>.w <experience?>.l <online>.l <Position>.l ?.50B <nick>.24B
+	
+R 0187 <account ID>.l
+	alive signal?
+R 0188 <fail?>.w <index>.w <val>.w
+	weapon refining. result+val to weapon
+R 0189 ?.w
+	unknown. fail to teleport?
+S 018a ?.w
+	game quit.
+R 018b <fail>.w
+	game quited/character select sever response. fail=0 is success, fail=1 is fail?
+R 018C <MonsID>.w <class>.w <size>.w <HP>.w <?>.w <deffence>.w <kind of monster>.w <magic deffence>.w <attribute>.w <anti-attribute?>.9b
+	response to sense skill by wizard.
+	0 small
+	1 middle
+	2 big
+R 0191 <ID>.l <message>.80B
+	message of talky box.
+S 0193 <ID>.l
+	name search for guild member?
+R 0194 <ID>.l <nick>.24B
+	response to name search for guild member?
+R 0195 <ID>.l <nick>.24B <party name>.24B <guild name>.24B <class name>.24B
+	response to packet number 0094 that if the player joined guild.
+R 0196 <type>.w <ID>.l
+	various message of skill that effect status. ID must be target, but only m ID and other's ID are sent?
+	type=00	2HQ casted. "attack speed insreased."
+	type=01	2HQ ended. "attack speed decreased."
+	type=02 IMPOSITIO casted. "power of the weapon increased."
+	type=03 IMPOSITIO ened. "power of the weapon decreased."
+	type=04	"casting delay become short"
+	type=05	"casting delay return to defailt"
+	type=06	"attribute of poison is given to the weapon"
+	type=07 ASPERSIO casted. "attribute of holly is given to the weapon"
+	type=08 ASPERSIO ended. "attribute of weapon return to default"
+	type=09	"armor got holly attribute"
+	type=0a	"armor's attribute return to default"
+	type=0b KYRIE casted. "barrier"
+	type=0c KYRIE ended. "barrier end"
+	type=0d	"became weapon ferfection mode"
+	type=0e	"end weapon perfection mode"
+	type=0f	"became over trust mode"
+	type=10	"end over trust mode"
+	type=11	"became maximize power mode"
+	type=12	"end maximize power mode"
+S 0197 <type>.w
+	type=0 /resetstate
+	type=1 /resetskill
+	no effect?
+R 019b <ID>.l <type>.l
+	display other's level up effect or weapon refiling?
+	type=0 base lvup?
+	type=1 job lvup?
+	type=3 weapon refiling
+R 0199 <type>.w
+	type=1 start pvp mode?
+R 019a <ID>.l <rank>.l <num>.l
+	pvp rank rank/num
+
+
+==========================================================================
+ Extended Packet Information (Japanese)
+--------------------------------------------------------------------------
+
+R 019b <ID>.l <type>.l
+	‘¼l‚Ìlvup‚â•Ší¸˜B“™‚Ì•\¦?
+	type=0 base lvup?
+	type=1 job lvup?
+	type=2 •Ší¸˜B¸”s
+	type=3 •Ší¸˜B¬Œ÷
+S 019c <len>.w <message>.?B
+	GMƒRƒ}ƒ“ƒh/nlb,/lb‚É‚Ä”­sBMAP“àƒuƒ[ƒhƒLƒƒƒXƒg
+R 019d <?>.4B
+	GMƒRƒ}ƒ“ƒh/hide‚É‚Ä”­sB
+R 019e
+	•ßŠlƒ‚ƒ“ƒXƒ^[Œˆ‚ß
+S 019f <ID>.l
+	•ßŠlƒ‚ƒ“ƒXƒ^[w’è
+R 01a0 <fail>.B
+	•ßŠl”»’è
+	fail=01‚Å¬Œ÷A00‚Å¸”s
+S 01a1 <param>.1B
+	<param>
+	0x00Fƒyƒbƒgó‘Ô•\¦
+	0x01F‰a‚ğ—^‚¦‚é
+	0x02FƒpƒtƒH[ƒ}ƒ“ƒX
+	0x03F—‘‚É–ß‚·
+	0x04FƒAƒNƒZƒTƒŠ‰ğœ
+R 01a2 <pet name>.24B <name flag>.B <lv>.w <hungry>.w <friendly>.w <accessory>.w
+	ƒyƒbƒg‚Ìó‘Ô
+	name flag:00=–¼‘O–¢İ’è 01=–¼‘Oİ’èÏ‚İ(•ÏX•s‰Â)
+	lv=ƒyƒbƒg‚ÌƒŒƒxƒ‹Ahungry=–• “x(0~100)Afriendly=e–§“x(‰Šú’l250?)Aaccessory=ƒAƒNƒZƒTƒŠ‚ÌItemID
+R 01a3 <fail>.B <itemID>.w
+	<fail>
+	0x00F‰a‚â‚è¸”s
+	0x01F‰a‚â‚è¬Œ÷
+R 01a4 <type>.B <ID>.l <val>.l
+	ƒyƒbƒgŠÖ˜A’Ê’m
+	type=00,val=00 ƒyƒbƒg›z‰»‚É‘—‚ç‚ê‚Ä‚­‚éBƒyƒbƒg”F¯—pH
+	type=01 e–§“x•Ï‰»
+	type=02 –• “x•Ï‰»
+	type=03 ƒAƒNƒZƒTƒŠ•Ï‰»(0‚Å–¢‘•”õ)
+	type=04 ƒpƒtƒH[ƒ}ƒ“ƒX Šm”F‚³‚ê‚½val=1~3
+		(4‚ÍƒXƒyƒVƒƒƒ‹ƒpƒtƒH[ƒ}ƒ“ƒXH)
+	type=05 HŠm”F‚³‚ê‚½val=0x14
+S 01a5 <pet name>.24B
+	ƒyƒbƒg‚Ì–¼‘OŒˆ‚ß
+R 01a6 <len>.w <index>.w*
+	ƒyƒbƒg‚Ì—‘ƒŠƒXƒg
+S 01a7 <index>.w
+	ƒyƒbƒg‚Ì—‘ƒŠƒXƒg‚ª‘I‘ğ‚³‚ê‚½
+S 01a8 <?>.w
+	–¢’²¸
+S 01a9 <emotion>.l
+	ƒyƒbƒgƒGƒ‚[ƒVƒ‡ƒ“‘—M
+R 01aa <ID>.l <emotion>.l
+	ƒyƒbƒgƒGƒ‚[ƒVƒ‡ƒ“óM
+	<emotion>
+	33ˆÈ‰º‚Ì‚Æ‚«FƒGƒ‚[ƒVƒ‡ƒ“
+	34ˆÈã‚Ì‚Æ‚«F”­Œ¾ƒe[ƒuƒ‹H
+R 01ab <ID>.l <type>.w <val>.l
+	00b0‚Ì‘¼l‚ÉŒ©‚¹‚éƒo[ƒWƒ‡ƒ“
+	0004:ƒ}ƒi[ƒ|ƒCƒ“ƒg(‰ï˜b‹Ö~)	
+	type 0004‚Ì‚Ìval‚Í0-‰ğœ‚Ü‚Å‚ÌŠÔ
+R 01ac <object id>.l
+	ƒAƒ“ƒNƒ‹‚Ì”­“®(‚İ’u)‚Ì‚İ–ˆ‰ñoŒ»(‹@”\‚Í“ä)
+R 01ad <len>.l <item>.w
+	–îì‚è‚Ìì¬‰Â”\ITEM•\óM
+S 01ae <itemID>.w
+	–îì‚è‚Åg‚¤Ş—¿‘—M
+S 01af <type>.w
+	ƒ`ƒFƒ“ƒWƒJ[ƒgiƒJ[ƒg‘I‘ğj
+	type=1	ƒm[ƒ}ƒ‹ƒJ[ƒg
+R 01b0 <monster id>.l <?>.b <new monster code>.l
+	–û‚ÌƒNƒ‰ƒXƒ`ƒFƒ“ƒW
+	<new monster code>‚Íƒ`ƒFƒ“ƒWŒã‚ÌƒR[ƒh(1001`)‚ğdword‚Å
+
+R 01b1 <type>.B <tick>.l
+	‰æ–Êã•”‚ÉPvP‚Åg‚¤ƒ^ƒCƒ}[‚ªoŒ»A<tick>‚Ì’PˆÊ‚Í•b
+	type=0 : 60i”ŠÔ•\¦
+	type=1 : [49:17:02:47]‚©‚ç<tick>•bˆø‚¢‚½ŠÔ‚©‚ç60i”ƒ^ƒCƒ}[ƒJƒEƒ“ƒgƒAƒbƒv
+	type=2 : [49:17:02:47]‚©‚ç<tick>•bˆø‚¢‚½ŠÔ‚©‚ç60i”ƒ^ƒCƒ}[ƒJƒEƒ“ƒgƒ_ƒEƒ“
+	type=3 : <tick>‚ÌãˆÊ2byte‚ª0‚Ì‚Æ‚«A<tick>•bƒJƒEƒ“ƒgƒ_ƒEƒ“
+	         0`99‚Ü‚Å‚µ‚©•\¦‚³‚ê‚È‚¢‚ªƒJƒEƒ“ƒg‚Íƒ‹[ƒv‚µ‚ÄŒp‘±‚·‚éAƒJƒEƒ“ƒgI—¹‚µ‚½‚ç•\¦Á‚¦‚é
+	         ãˆÊ2byte‚ª0ˆÈŠO‚È‚ç99‚ª•\¦‚³‚ê‚½‚Ü‚ÜÁ‚¦‚È‚¢
+
+S 01b2 <len>.w <message>.80B <flag>.B {<index>.w <amount>.w <value>.l}.8B*
+	˜I“XŠJİ
+	flag F 0=ƒLƒƒƒ“ƒZƒ‹ , 1=ƒI[ƒvƒ“
+R 01b3 <filename>.64B <type>.B
+	‰æ‘œ•\¦(R 0145‚ÌãˆÊŒİŠ·)
+	type	0:¶
+		1:’†‰›
+		2:‰E(ƒJƒvƒ‰)
+		3:ƒo[‚Â‚«ˆÚ“®‰Â”\~ƒ{ƒ^ƒ“•t
+		4:ƒo[‚È‚µˆÚ“®‰Â”\~ƒ{ƒ^ƒ“•t(”¯Œ^ƒJƒ^ƒƒO)
+		255:”ñ•\¦
+R 01b4 <?>.l <?>.l <?>.w
+	‰½‚à‚µ‚È‚¢
+R 01b6 <guildID>.l <guildLv>.l <connum>.l <’èˆõ>.l <Avl.lvl>.l <now_exp>.l <next_exp>.l <ã”[ƒ|ƒCƒ“ƒg>.l <«ŒüF-V>.l <«ŒüR-W>.l <members>.l <guild name>.24B <guild master>.24B <agit?>.20B
+	ƒMƒ‹ƒhî•ñ
+R 01b8 <type>.B
+	ƒMƒ‹ƒh‹¤—p‹âsƒVƒXƒeƒ€H–¢À‘•H
+	type=1 : ¬Œ÷H–³”½‰
+	type=2 : ƒMƒ‹ƒhZenyŠÖ˜Aì‹Æ‚ª¸”s‚µ‚Ü‚µ‚½B
+	type=3 : ƒMƒ‹ƒh‚ªŠ‚Å‚«‚éÅ‘å‹àŠz‚ğ’´‰ß‚µ‚½‚½‚ßì‹Æ‚ª¸”s‚µ‚Ü‚µ‚½B
+	type=4 : ‚¨‹à‚ª‘«‚è‚È‚¢‚©AŠ‚Å‚«‚éÅ‘å‹àŠz‚ğ’´‰ß‚µ‚Ü‚µ‚½B
+	‘¼‚Í–³‹
+R 01b9 <ID>.I
+	”íƒ_ƒ“™‚É‚æ‚éID‚Ì‰r¥’†’f
+S 01ba <CharName>.24B
+	GMƒRƒ}ƒ“ƒh/remove‚É‚Ä”­sBaccount_name‚Ö”ò‚ÔƒRƒ}ƒ“ƒh
+S 01bb <CharName>.24B
+	GMƒRƒ}ƒ“ƒh/shift‚É‚Ä”­sBchar_name‚Ö”ò‚ÔƒRƒ}ƒ“ƒh(@jumpto)
+S 01bc <CharName>.24B
+	GMƒRƒ}ƒ“ƒh/recall‚É‚Ä”­sBaccount_nameŒÄ‚Ño‚µƒRƒ}ƒ“ƒh
+S 01bd <CharName>.24B
+	GMƒRƒ}ƒ“ƒh/summon‚É‚Ä”­sBchar_nameŒÄ‚Ño‚µƒRƒ}ƒ“ƒh(@recall)
+S 01c0
+	GMƒRƒ}ƒ“ƒh/¿ä±İ‚É‚Ä”­sB‰½‚©‚Ì—v‹ƒpƒP
+R 01c1 <type>.l <?>.8B
+	”’‚Ì•¶š‰»‚¯A•s–¾
+	ƒoƒCƒiƒŠ‚É‹Lq‚³‚ê‚½•¶š—ñ‚ª“f‚«o‚³‚ê‚Ä‚é‚æ‚¤‚È‚Ì‚ÅŒ»İ–¢g—pH
+	type=0x0064
+	type=0x03e8
+	type=0x2710
+R 01c2
+	‰½‚à‚µ‚È‚¢‚æ‚¤‚Éƒtƒ‰ƒO‚ª‹K’è‚³‚ê‚Ä‚¢‚é
+
+R 01c3 <len>.w <color>.l <font?>.w <size?>.w <?>.l <message>.?B
+	GM‚©‚ç‚Ì“V‚ÌºiR 009a‚Ìƒ}ƒ‹ƒ`ƒJƒ‰[”Åj
+R 01c4 <index>.w <amount>.l <itemID>.w <item data>.12B
+	ƒJƒvƒ‰‘qŒÉƒAƒCƒeƒ€
+R 01c5 <index>.w <amount>.l <itemID>.w <item data>.12B
+	ƒJƒvƒ‰‘qŒÉƒAƒCƒeƒ€H
+R 01c8 <index>.w <item ID>.w <ID>.l <amount left>.w <type>.B
+	ƒAƒCƒeƒ€g—p‰“šB(00a8‚ÌãˆÊƒo[ƒVƒ‡ƒ“H)
+	type=00‚Ìê‡g—p¸”s? amount‚àƒSƒ~‚Ì–Í—l
+	type=01‚Ìê‡¬Œ÷‚ÅAamount‚Íg—pŒã‚Ìc‚èŒÂ”
+R 01c9 <dst ID>.l <src ID>.l <X>.w <Y>.w <type>.B <fail>.B ?.81b
+	ƒXƒLƒ‹Œø”\’nì¬(011f‚ÌãˆÊƒo[ƒVƒ‡ƒ“H)
+	type 0x7e:SWA0x7f:‰Î•ÇA0x80 ƒ|ƒ^ŠJ‚«’†A0x81 ƒ|ƒ^ŠJ‚«’¼‘O
+	0x82 ¹‘ÌA0x83 ƒTƒ“ƒNA0x84 ƒ}ƒOƒkƒXA0x85 ƒjƒ…[ƒ}
+	0x86 0x86 ‘å–‚–@(SG/MS/LoV/GX)A0x87 ƒtƒ@ƒCƒ„[ƒsƒ‰‘Ò‹@
+	0x88 ƒtƒ@ƒCƒ„[ƒsƒ‰”š”­A0x87`0x8B •\¦–³‚µA
+	0x8c ƒg[ƒL[ƒ{ƒbƒNƒX(”­“®’†)A0x8D ƒAƒCƒXƒEƒH[ƒ‹
+	0x8E ƒNƒƒOƒ}ƒCƒAA0x8f ƒuƒ‰ƒXƒgƒ}ƒCƒ“A0x90 ƒXƒLƒbƒh
+	0x91 ƒAƒ“ƒNƒ‹A0x92 ƒxƒmƒ€ƒ_ƒXƒgA0x93 ƒ‰ƒ“ƒhƒ}ƒCƒ“
+	0x94 ƒVƒ‡ƒbƒNƒEƒF[ƒuƒgƒ‰ƒbƒvA0x95 ƒTƒ“ƒhƒ}ƒ“
+	0x96 ƒtƒ‰ƒbƒVƒƒ[A0x97 ƒtƒŠ[ƒWƒ“ƒOƒgƒ‰ƒbƒv
+	0x98 ƒNƒŒƒCƒ‚ƒA[ƒgƒ‰ƒbƒvA0x99 ƒg[ƒL[ƒ{ƒbƒNƒX
+	0x9A ƒ{ƒ‹ƒP[ƒmA0x9B ƒfƒŠƒ…[ƒWA0x9C ƒoƒCƒIƒŒƒ“ƒgƒQƒCƒ‹
+	0x9D ƒ‰ƒ“ƒhƒvƒƒeƒNƒ^[A0x9E Zenyƒ}[ƒNA0x9F Zeny‘Ü
+	0xA0 ‰ñ‚é—Î‚Ì—ÖA0xA1 ƒsƒ“ƒN‚Ì‰¹•„ (“ñ˜A•„—L‚è
+	0xA2 ^‚ñ’†‚É“_‚Ì‚ ‚éŒõ‚Ì‹ÊA0xA3 ƒsƒ“ƒN‚ÌƒXƒvƒŠƒ“ƒO
+	0xA4 [•£‚Ì’†‚ÉA0xA5 ‰ñ‚éÂ‚¢—ÖA0xA6 •s‹¦˜a‰¹
+	0xA7 Œû“JA0xA8 —[—z‚ÌƒAƒTƒVƒ“ƒNƒƒXA0xA9 ƒuƒ‰ƒM‚Ì
+	0xAA ƒCƒhƒDƒ“‚Ì—ÑŒçA0xAB ©•ªŸè‚Èƒ_ƒ“ƒXA0xAC ƒnƒ~ƒ“ƒO
+	0xAD „‚ğ–Y‚ê‚È‚¢‚ÅcA0xAE ƒT[ƒrƒXƒtƒH[ƒ†[
+	0xAF ƒsƒ“ƒN‚ÌƒXƒvƒŠƒ“ƒOA0xB0 •\¦–³‚µ
+	0xB0 ƒOƒ‰ƒtƒBƒeƒB,
+	0xB1 ƒfƒ‚ƒ“ƒXƒgƒŒ[ƒVƒ‡ƒ“A0xB2`0xBF •\¦–³‚µ
+	0xB2 ƒsƒ“ƒN‚Ìƒ[ƒvƒ|[ƒ^ƒ‹•—
+	0xB3 ¬‚³‚È\š‰Ë‚ª‚Ó‚æ‚Ó‚æ
+	0xB4 ƒoƒWƒŠƒJA0xB5 ƒGƒtƒFƒNƒg‚È‚µH
+	0xB6 •‚¢~‚ª—§‘Ì“I‚É•‚‚©‚Ñã‚ª‚é
+	0xB7 ƒNƒ‚‚Ì‘ƒA0xB8` ƒGƒtƒFƒNƒg‚È‚µH
+	‘¼î•ñ‹‚Ş
+	?.81b‚Í“äB
+R 01cd (<sid>.l)x7
+	ƒI[ƒgƒXƒyƒ‹‘I‘ğˆóM
+	<sid>x7 ‚É‚Í NB,CB,FB,LB,SS,FBL,FD ‚Ì‡‚ÅƒXƒLƒ‹ƒR[ƒh‚ªdword‚Å“ü‚é
+	‚Ü‚¾‘I‘ğ‚Å‚«‚È‚¢ƒXƒLƒ‹‚Ì•”•ª‚Í <sid> = 0x00000000 ‚ª“ü‚é
+S 01ce <sid>.l
+	ƒI[ƒgƒXƒyƒ‹‘I‘ğˆ‘—M
+R 01cf <crusader id>.l <target id>.l <?>.18b
+	Œ£gó‘Ôƒ^[ƒQƒbƒgON/OFFBŒ£g‚ªØ‚ê‚é‚Æ <target id> ‚ª 0x00000000 ‚É‚È‚é
+
+R 01d0 <ID>.l <num>.w 
+	<num> : ‹CŒ÷‚Ì”(”ñLv)
+R 01d1 <monk id>.l <target monster id>.l <bool>.l
+	”’‰Hæ‚èó‘ÔON/OFFB<bool> ‚Í”’næ‚è¬—§‚É 0x00000001 ‰ğœ‚É 0x00000000 ‚ª—ˆ‚é
+R 01d2 <id>.l <delay>.l
+	ƒ‚ƒ“ƒN‚ÌƒRƒ“ƒ{ƒfƒBƒŒƒC(msec)
+	O’iE˜A‘Å‚ÍŠî–{ƒfƒBƒŒƒC1000(+300)A–Ò—´‚ÍŠî–{ƒfƒBƒŒƒC700(+300)
+R 01d3 <name>.24B <type>.B <?>.l <id>.l
+	ƒTƒEƒ“ƒhƒGƒtƒFƒNƒg‚ğ–Â‚ç‚·
+R 01d4 <ID>.l
+	•¶š—ñ“ü—Í‘‹•\¦(ID‚ÍNPC‚ÌID‚ª“ü‚é)
+S 01d5 <len>.w <ID>.l <input>.?B 00
+	•¶š—ñ“ü—Í“à—e‘—M(ID‚ÍNPC‚ÌID‚ª“ü‚é)
+R 01d6 <?>.w
+	•\¦ŠÖ˜A‚©H
+	5,6,11,12‚È‚ç‰½‚à‚µ‚È‚¢
+R 01d7 <ID>.l <equip point>.b <item id1>.w <item id2>.w
+	‘•”õƒOƒ‰ƒtƒBƒbƒN <equip point> ‚Í 02è‚Æ09‘«‚Ì‚İŠm”FBid2‚Í¶è
+R 01d8 <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.w <class>.w <hair>.w <item id1>.w <item id2>.w <head option bottom>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.l <emblem>.l <manner>.w <karma>.B <sex>.B <X_Y_dir>.3B ?.B ?.B <sit>.B <Lv>.B ?.B
+	ƒ}ƒbƒvƒ[ƒh&ˆÚ“®—pAŒü‚«•t‚«—pƒLƒƒƒ‰î•ñ?(0078‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+R 01d9 <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.w <class>.w <hair>.w <item id1>.w <item id2>.w.<head option bottom>.w <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.l <emblem>.l <manner>.w <karma>.B <sex>.B <X_Y_dir>.3B ?.B ?.B <Lv>.B ?.B
+	ƒeƒŒƒ|“™‚Ì•\¦”ÍˆÍ“à•¦‚«ƒLƒƒƒ‰—pAŒü‚«•t‚«–³‚µƒLƒƒƒ‰î•ñ?(0079‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+R 01da <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.w <class>.w <hair>.<item id1>.w <item id2>.w <head option bottom>.w <server tick>.l <head option top>.w <head option mid>.w <hair color>.w ?.w <head dir>.w <guild>.l <emblem>.l <manner>.w <karma>.B <sex>.B <X_Y_X_Y>.5B ?.B ?.B ?.B <Lv>.B ?.B
+	•\¦”ÍˆÍ“àƒLƒƒƒ‰ˆÚ“®î•ñ(007b‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+S 01db
+	ˆÃ†‰»key—v‹
+R 01dc <len>.w <key>.?B
+	ˆÃ†‰»key‘—•t
+S 01dd <version>.l <account name>.24B <md5 binary>.16B <version2>.1B
+	id&ˆÃ†‰»Ï‚İpass‘—M
+		‡‚ÉƒNƒ‰ƒCƒAƒ“ƒg‚ª01db‚ğ‘—‚éA
+		I‚ª01dc‚Åkey‚ğ•Ô‚·A
+		ƒNƒ‰ƒCƒAƒ“ƒg‚ª"<key><password>"‚É‚Â‚¢‚Ämd5ŒvZ‚µ
+		<md5 binary>‚ÌŠ‚ğ–„‚ß‚Ä01dd‚ğ‘—‚éB
+		<passwordencrypt2>‚Ì‚Í
+		"<key><password>"‚É‘Î‚µ‚Ämd5ŒvZ‚Æ‚µ‚Ä‚¢‚éŠ‚ğ
+		"<password><key>"‚Æ•ÏX‚·‚é
+R 01de <skill ID>.w <src ID>.l <dst ID>.l <server tick>.l <src speed>.l <dst speed>.l <param1>.l <param2>.w <param3>.w <type>.B
+	UŒ‚ŒnƒXƒLƒ‹ƒGƒtƒFƒNƒg@(0114‚ÌãˆÊƒo[ƒVƒ‡ƒ“H)
+	type=04 ‰Î•Ç‚ÅŠÏ‘ª type=06‚Æ‚Ù‚Ú“¯‚¶?
+	type=05 NB/FBl‚Ì•ªU‚µ‚½ƒ_ƒ[ƒW—pH
+	type=06 ’P”­‚à‚Ì? param1‚Íƒ_ƒ[ƒW‡ŒvAparam2‚ÍlevelAparam3‚Í1ŒÅ’è‚Æ—\‘z
+	type=07 ƒ_ƒ[ƒW•\¦–³‚µH
+	type=08 ˜A‘Å‚à‚Ì? param1‚Íƒ_ƒ[ƒW‡ŒvAparam2‚ÍlevelAparam3‚Í•ªŠ„”‚Æ—\‘z
+	type=09 ƒ_ƒ[ƒWƒ‚[ƒVƒ‡ƒ“‚È‚µ‚Éƒ_ƒ[ƒW‚¾‚¯•\¦‚³‚ê‚é•¨(ƒCƒ“ƒfƒ…ƒA)‚Æv‚Á‚½‚Ì‚¾‚ªƒ_ƒ[ƒWƒ‚[ƒVƒ‡ƒ“‚ªo‚é•¨B(‹@”\‚Í“ä)
+S 01df <ID>.|
+	GM‰EƒNƒŠƒbƒN‚É‚æ‚éID‚Ìƒ`ƒƒƒbƒg‹Ö~‰ñ”QÆH
+R 01e0 <ID>.l ?.24B
+	GM‚É‚æ‚éƒ`ƒƒƒbƒg‹Ö~ŠÔQÆH
+	0x1df‚É‘Î‚·‚é‰“š
+R 01e1 <ID>.l <num>.w 
+	<num> : ‹CŒ÷‚Ì”(”ñLv) ˆê“x•\¦‚µ‚½‚çŒã‚Ç‚ñ‚Ènum‚ª—ˆ‚Ä‚à–³‹‚³‚ê‚éB
+
+R 01e2 <dst_id>.l <src_id>.l <nick>.24B
+	ƒvƒƒ|[ƒY‚³‚ê‚Ü‚µ‚½BOX•\¦A–¢g—pH
+S 01e3 <dst_id>.l <src_id>.l <?>.l
+	01e2‚Ìƒvƒƒ|[ƒY•Ô“š
+R 01e4
+	ƒvƒƒ|[ƒYƒ^[ƒQƒbƒg•\¦
+S 01e5 <ID>.l
+	ƒvƒƒ|[ƒY—v‹
+R 01e6 <partner name>.24B
+	Œ‹¥ƒXƒLƒ‹‚ ‚È‚½‚Éˆ§‚¢‚½‚¢g—p‚Ì‹©‚Ñº
+S 01e7
+	ƒXƒpƒmƒr‚Å/doridori‚µ‚½‚ç”ò‚ñ‚Å‚­‚éBSPR‰ñ•œ—Ê2”{ƒtƒ‰ƒO‚ğ—§‚Ä‚éƒpƒPƒbƒg
+S 01e8 <party name>.24B <item1>B <item2>B
+	<item1>ƒAƒCƒeƒ€ûW•û–@B0‚ÅŒÂl•ÊA1‚Åƒp[ƒeƒBŒö—L
+	<item2>ƒAƒCƒeƒ€•ª”z•û–@B0‚ÅŒÂl•ÊA1‚Åƒp[ƒeƒB‚É‹Ï“™•ª”z
+	(00f9‚ÌãˆÊƒo[ƒVƒ‡ƒ“)
+R 01e9
+	–¢’²¸
+R 01ea <ID>.l
+	Œ‹¥ƒGƒtƒFƒNƒg(‰¹ŠyA†á)
+	ID‚ÍV•w‚Ì‚à‚Ì‚ª“ü‚éH
+R 01eb <ID>.l <X>.w <Y>.w
+	ƒMƒ‹ƒhƒƒ“ƒoˆÊ’uXV
+R 01ec
+	–¢’²¸
+S 01ed
+	ƒXƒpƒmƒr‚ª”š—ô”g“®‚É‚È‚éƒtƒ‰ƒO‚ğ—§‚Ä‚éƒpƒPƒbƒg
+R 01ee <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B <card>.4w}.18B*
+	Š—LÁ–Õ•i&ûW•iƒŠƒXƒg
+	–î‚Ìê‡‚Í?.2B‚ª0x8000‚É‚È‚é
+	00a3‚©‚ç•ÏX
+R 01ef <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B <card>.4w}.18B*
+	ƒJ[ƒg“àƒAƒCƒeƒ€BÁ–Õ•i/ûW•i
+	0123‚©‚ç•ÏX
+R 01f0 <len>.w {<index>.w <item ID>.w <type>.B <identify flag>.B <amount>.w ?.2B <card>.4w}.18B*
+	ƒJƒvƒ‰‚³‚ñ‚É—a‚¯‚Ä‚ ‚éÁ–Õ•i&ûW•iƒŠƒXƒg
+	00a5‚©‚ç•ÏX
+R 01f2
+	–¢’²¸
+R 01f3 <ID>.l <type>.l
+	bl‚©‚ç”­¶‚·‚éƒGƒtƒFƒNƒg
+R 01f4 <name>.24B <trade id?>.L <LV>.w
+	æ•û‚©‚çæˆø—v¿
+	00e5‚©‚ç•ÏX
+R 01f5 <result>.B <trade id?>.L <LV>.w
+	‚±‚¿‚ç‚©‚ç‚Ìæˆø—v¿‚É‘Î‚·‚é”½‰
+	00e7‚©‚ç•ÏX
+R 01f6 <papa_id>.l <mama_id>.l <requester_name>.24B
+	—{q—v¿ƒ_ƒCƒAƒƒO‚Ì•\¦
+S 01f7 <papa_id>.l <mama_id>.l <flag>.l
+	—{q•Ô“š
+	ID‚Í01f6‚Åó‚¯æ‚Á‚½‚à‚Ì‚ğ‚»‚Ì‚Ü‚Ü•Ô‚·
+	flag=0 ‹‘”Û
+	flag=1 ó—Ì
+R 01f8
+	—{qƒ^[ƒQƒbƒg•\¦AŒ»İ–¢g—pH
+S 01f9 <ID>.l
+	—{q—v‹
+R 01fc <length>.w { <?1>.w <RepairItemID>.w <?2>.9B }.13B*
+	C—‰Â”\ƒAƒCƒeƒ€ƒŠƒXƒg•\¦
+S 01fd <?1>.w
+	C—ƒAƒCƒeƒ€‚Ì‘I‘ğ
+R 01fe <RepairItemID>.w <flag>.b
+	C—Œ‹‰Ê(flag = 00‚È‚ç¬Œ÷ 01‚È‚ç¸”s)
+R 01ff <ID>.l <x>.w <y>.w
+	‚«”ò‚Î‚µAN“ü•s‰ÂƒZƒ‹‚àŠÑ’Ê‚·‚é
+S 0200 <login name>.24B
+	ragexe‚É/accountƒIƒvƒVƒ‡ƒ“‚ğ‚Â‚¯‚Ä‹N“®‚·‚é‚ÆƒƒOƒCƒ“—v‹‚É•t‰Á‚³‚ê‚éƒpƒPƒbƒg
+R 0201 <len>.w { <id1>.l <id2>.l <name>.24B }.32B*
+	—F’BƒŠƒXƒg‘S•”óM
+S 0202 <nick name>.24B
+	—F’BƒŠƒXƒg‚Ö’Ç‰Á—v‹
+S 0203 <id1>.l <id2>.l
+	—F’BƒŠƒXƒg‚©‚çíœ—v‹
+S 0204 <ragexe md5>.16B
+	ƒƒOƒCƒ“—v‹‚É•t‰Á‚³‚ê‚éƒpƒPƒbƒgB16ƒoƒCƒg‚ÍŒÅ’èH
+R 0205 <id>.l <name>.24B
+	`‚³‚ñ‚Æ`‚³‚ñ‚ª—£¥‚µ‚Ü‚µ‚½
+R 0206 <id1>.l <id2>.l <flag>.B
+	—F’BƒŠƒXƒg‚ÌÚ‘±î•ñ’Ê’m
+	flag=1 ƒƒOƒAƒEƒgAflag=0 ƒƒOƒCƒ“
+R 0207 <id1>.l <id2>.l <name>.24B
+	—F’BƒŠƒXƒg‚Ö‚Ì’Ç‰Á—v¿óM
+S 0208 <id1>.l <id2>.l <flag>.l
+	—F’BƒŠƒXƒg‚Ö‚Ì’Ç‰Á—v¿‚Ì•Ô–
+	flag=1 ó‘ø, 0= ‹‘”Û
+R 0209 <flag>.w <id1>.l <id2>.l <name>.24B
+	—F’BƒŠƒXƒg‚Ö‚Ì’Ç‰Á—v¿‚ÌŒ‹‰Ê’Ê’m
+	flag=0 ‚Å¬Œ÷, 1=‹‘”Û‚³‚ê‚½, 2=©•ª‚Ìl”ƒI[ƒo[, 3=‘Šè‚Ìl”ƒI[ƒo[
+R 020a <id1>.l <id2>.l
+	—F’BƒŠƒXƒg‚©‚çíœ’Ê’m
+S 020b <?>.B<ragexe md5>.16B
+	ƒLƒƒƒ‰ƒNƒ^ƒT[ƒoÚ‘±—v‹0065‚É•t‰Á‚³‚ê‚éƒpƒPƒbƒgB1+0204‚Ì16ƒoƒCƒg‚Å17ƒoƒCƒgH
+
+R 020e <name>.24B <id>.l <val>.B <type>.B
+	‘¾—z‚ÆŒ‚Æ¯Œn“‚Ìê‡<val>‚ÍƒXƒLƒ‹Lv-1
+	ƒeƒRƒ“ƒ~ƒbƒVƒ‡ƒ“‚Ìê‡<val>‚Í%
+	type=0 : ‘¾—z‚ÆŒ‚Æ¯‚ÌŠ´î‚Ì“o˜^Š®—¹
+	type=1 : ‘¾—z‚ÆŒ‚Æ¯‚ÌŠ´î‚Ì“o˜^î•ñ
+	type=10: ‘¾—z‚ÆŒ‚Æ¯‚Ì‘‚µ‚İ‚Ì“o˜^Š®—¹
+	type=11: ‘¾—z‚ÆŒ‚Æ¯‚Ì‘‚µ‚İ‚Ì“o˜^î•ñ
+	type=20: ƒeƒRƒ“ƒ~ƒbƒVƒ‡ƒ“ƒ^[ƒQƒbƒg
+	type=21: ƒeƒCƒ~ƒ“ƒOƒ~ƒbƒVƒ‡ƒ“ƒ^[ƒQƒbƒg
+	type=30: ‘¾—z‚ÆŒ‚Æ¯‚Ì“Vg‚Ì‰Šú‰»
+	type=40: Target HP <id>
+R 0210
+	PVP‚Ìƒ|ƒCƒ“ƒg•\¦
+S 0212 <charname>.24B
+	GMƒRƒ}ƒ“ƒh/rc‚É‚Ä”­sBŒø‰Ê•s–¾B
+S 0213 <charname>.24B
+	GMƒRƒ}ƒ“ƒh/check‚É‚Ä”­sBŒø‰Ê•s–¾B
+R 0214 { <Val>.w }*25
+	ƒXƒe[ƒ^ƒX•\¦H
+			STR,AGI,VIT,INT,DEX,LUK,
+	standard	STR,AGI,VIT,INT,DEX,LUK,
+			attPower,refiningPower,MAXmatpow,Minmatpower,ASPD,
+			itemdefPow,plusdefPow,mdefPower,plusmdefPow,plusASPD,
+			hitSuccsesVal,avoidSuccsesVal,plusAvoidSuccsesValue
+R 0215 <type>.l
+	15 ‘S‚Ä‚Ìó‘ÔˆÙí‚ª‰ñ•œ‚µ‚Ü‚µ‚½B
+	16 1•ªŠÔA‘S‚Ä‚Ìó‘ÔˆÙí‚Ö‘Ï«‚ªŒ»‚ê‚Ü‚·B
+	17 1•ªŠÔAÅ‘åHP‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	18 1•ªŠÔAÅ‘åSP‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	19 1•ªŠÔA‘S‚Ä‚Ì”\—Í‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	1c 1•ªŠÔA‘•”õ‚µ‚½•Ší‚É¹‘®«‚ª•t—^‚³‚ê‚Ü‚·B
+	1d 1•ªŠÔA‘•”õ‚µ‚½ŠZ‚É¹‘®«‚ª•t—^‚³‚ê‚Ü‚·
+	1e 10•bŠÔA–hŒä—Í‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	1f 1•ªŠÔAUŒ‚—Í‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	20 1•ªŠÔA–½’†—¦‚Æ‰ñ”ğ—¦‚ª‘å•‚Éã¸‚µ‚Ü‚·B
+	28 ‘•”õ‚ªƒR[ƒeƒBƒ“ƒO‚³‚ê‚Ä‚¢‚é‚½‚ßAƒtƒ‹ƒXƒgƒŠƒbƒv‚ª¸”s‚É‚È‚è‚Ü‚·
+	‘¼ –³‹‚³‚ê‚é
+R 0216 <type>.l
+	00 ‚·‚Å‚É—{q‚ª‚¢‚é•v•w‚Í‚»‚êˆÈã—{q‚ğ‚Â‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñB
+	01 •v•w‚ÌƒŒƒxƒ‹‚ª“ñl‚Æ‚à70ˆÈã‚É‚È‚é‚Æ—{q‚ğ‚Â‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+	02 Œ‹¥‚µ‚½ƒLƒƒƒ‰ƒNƒ^[‚Í—{q‚É‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñB
+	‘¼ –³‹‚³‚ê‚é
+S 0217
+	/blacksmith
+S 0218
+	/alchemist
+R 0219 { <charname>.24B }*10 { <point>.L }*10
+	BSƒ‰ƒ“ƒLƒ“ƒO
+R 021a { <charname>.24B }*10 { <point>.L }*10
+	ƒAƒ‹ƒPƒ~ƒ‰ƒ“ƒLƒ“ƒO
+R 021b <point>.L <total>.L
+	BSƒ‰ƒ“ƒLƒ“ƒOƒ|ƒCƒ“ƒg‚ª<point>ã¸‚µ‚ÄA<total>‚É‚È‚è‚Ü‚µ‚½B
+R 021c <point>.L <total>.L
+	ƒAƒ‹ƒPƒ~ƒ‰ƒ“ƒLƒ“ƒOƒ|ƒCƒ“ƒg‚ª<point>ã¸‚µ‚ÄA<total>‚É‚È‚è‚Ü‚µ‚½B
+S 021d <?>.l
+	/effect‚µ‚Ä‚é‚©‚Ç‚¤‚©H
+R 021f
+	–¢’²¸
+R 0220
+	–¢’²¸
+R 0221 <len>.l { <?1>.w <RefineItemID>.w <?2>.9B }.13B*
+	¸˜B‘I‘ğƒEƒBƒ“ƒhƒE
+S 0222 <?>.l
+	¸˜BƒAƒCƒeƒ€‘I‘ğ
+R 0223 <flag>.l <itemid>.w
+	flag=0 : u¸˜B‚µ‚½•Ší`vA¬Œ÷
+	flag=1 : u¸˜B‚µ‚½•Ší`vA¸”sH
+	flag=2 : •Ší¸˜BƒXƒLƒ‹‚ÌƒŒƒxƒ‹‚ª•s‘«‚µ‚Ä‚¢‚Ü‚·B
+	flag=3 : ¸˜B‚É•K—v‚ÈƒAƒCƒeƒ€‚ª•s‘«‚µ‚Ä‚¢‚é‚Ì‚ÅA¸˜B‚Å‚«‚Ü‚¹‚ñB
+	‘¼‚Í–³‹
+R 0224 <point>.L <total>.L
+	ƒeƒRƒ“ƒ~ƒbƒVƒ‡ƒ“ƒ‰ƒ“ƒLƒ“ƒOƒ|ƒCƒ“ƒg‚ª<point>ã¸‚µ‚ÄA<total>‚É‚È‚è‚Ü‚µ‚½B
+S 0225
+	/taekwon
+R 0226 { <charname>.24B }*10 { <point>.L }*10
+	ƒeƒRƒ“ƒ‰ƒ“ƒLƒ“ƒO
+R 0227
+	nProŠÖŒWB0258‘—MŒã•Ô“šB
+S 0228
+	ƒƒOƒCƒ“—v‹‚É•t‰Á‚³‚ê‚éƒpƒPƒbƒgBnProŠÖŒWB
+R 0229 <ID>.l <opt1>.w <opt2>.w <option>.l <pk>.B
+	Œ©‚½–Ú•ÏX(0119‚©‚ç•ÏX)
+R 022a <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.l <class>.w <hair>.w <item id1>.w <item id2>.w <head option bottom>.w <head option top>.w <head option mid>.w <hair color>.w <clothes_color>.w <head dir>.w <guild>.l <emblem>.l <manner>.w <opt3>.l <karma>.B <sex>.B <X_Y>.2B <dir>.B <5ŒÅ’è>.2B <sit>.B <Lv>.w
+	ƒ}ƒbƒvƒ[ƒh&ˆÚ“®—pAŒü‚«•t‚«—pƒLƒƒƒ‰î•ñ?(01d8‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+R 022b <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.l <class>.w <hair>.w <item id1>.w <item id2>.w <head option bottom>.w <head option top>.w <head option mid>.w <hair color>.w <clothes_color>.w <head dir>.w <guild>.l <emblem>.l <manner>.w <opt3>.l <karma>.B <sex>.B <X_Y>.2B <dir>.B <5ŒÅ’è>.2B <Lv>.w
+	ƒeƒŒƒ|“™‚Ì•\¦”ÍˆÍ“à•¦‚«ƒLƒƒƒ‰—pAŒü‚«•t‚«–³‚µƒLƒƒƒ‰î•ñ?(01d9‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+R 022c <ID>.l <speed>.w <opt1>.w <opt2>.w <option>.l <class>.w <hair>.w <item id1>.w <item id2>.w <head option bottom>.w <server tick>.l <head option top>.w <head option mid>.w <hair color>.w <clothes_color>.w <head dir>.w <guild>.l <emblem>.w <manner>.w <opt3>.l <karma>.B <sex>.B <X_Y_X_Y>.5B <0x88ŒÅ’è>.B <0ŒÅ’è>.2B <Lv>.w
+	•\¦”ÍˆÍ“àƒLƒƒƒ‰ˆÚ“®î•ñ(01da‚ÌãˆÊƒo[ƒWƒ‡ƒ“)
+
+S 022d <0ŒÅ’è>.w <menu>.B
+	ƒzƒ€‚Ìƒƒjƒ…[—v‹
+	menu=0 : ƒzƒ€î•ñ‚Ì’Ê’m
+	menu=1 : ƒzƒ€‚â‰a‚â‚è
+	menu=2 : ƒzƒ€íœ
+R 022e <name>.24B <rename_flag>.B <base_level>.w <hungry>.w <intimate>.w <equip>.w <atk>.w <matk>.w <hit>.w <critical>.w <def>.w <mdef>.w <flee>.w <aspd>.w <hp>.w <max_hp>.w <sp>.w <max_sp>.w <base_exp>.l <nextbase_exp>.l <skill_point>.w <attackable>.w
+	ƒzƒ€‚ÌƒXƒe[ƒ^ƒXî•ñ‚ğ‚Ü‚Æ‚ß‚Ä‘—‚è•t‚¯
+R 022f <fail>.B <itemID>.w
+	ƒzƒ€‚É‰a‚â‚èA0x1a3‚Æ“¯ˆê
+	<fail>
+	0x00F‰a‚â‚è¸”s
+	0x01F‰a‚â‚è¬Œ÷
+R 0230 <type>.w <ID>.l <param>.l
+	ƒzƒ€ŠÖ˜A’Ê’mA0x1a4‚Ìƒzƒ€”Å
+	type=0, param=0 : ƒzƒ€¶¬‚É‘—‚ç‚ê‚é
+	type=0x002 : • Œ¸‚è
+	type=0x100 : e–§“x
+	i0`3‚Ìswitch‚ ‚èHj
+S 0231 <name>.24B
+	ƒzƒ€‚Ì–¼‘O•ÏX—v‹
+S 0232 <X_Y>.3B
+	ƒzƒ€ˆÚ“®—v‹
+S 0233 <?>.4B <target_id>.l <type>.B
+	ƒzƒ€UŒ‚—v‹
+S 0234 <ID>.l
+	ƒzƒ€‚ğƒ}ƒXƒ^[‚ÌŒ³‚Ö–ß‚·
+R 0236 <point>.L <total>.L
+	‹sEÒƒ‰ƒ“ƒLƒ“ƒOƒ|ƒCƒ“ƒg‚ª<point>ã¸‚µ‚ÄA<total>‚É‚È‚è‚Ü‚µ‚½B
+S 0237
+	/pk
+R 0238 { <charname>.24B }*10 { <point>.L }*10
+	‹sEÒƒ‰ƒ“ƒLƒ“ƒO
+
+R 023a <flag>.w
+	‘qŒÉH
+	0 - passwd set plz
+	1 - passwd req
+S 023b <flag>.w <?>.32B
+	2 - passwd set
+	3 - passwd send
+R 023c <type>.w <val>.w
+	4 passwd set ok
+	5 passwd miss
+	6 ok
+R 023e <flag>.w
+	ƒLƒƒƒ‰H
+	0 - passwd set plz
+	1 - passwd req
+S 023f
+	ƒ[ƒ‹BOX‚ÌXV—v‹
+R 0240 <len>.w <num>.l { <mail_num>.l <title>.40B <read>.B <nick>.24B <time>.l }*
+	ƒ[ƒ‹ˆê——•\ABOX‚ğŠJ‚¢‚Ä‚¢‚é‚É‘ ‚Ö‘—M
+	0x23f‚Ì‰“š
+S 0241 <num>.l
+	ƒ[ƒ‹‚ÌóM—v‹
+R 0242 <len>.w <num>.l <title>.40B <nick>.24B <0x22ŒÅ’è>.l <zeny>.l <amount>.l <itemid>.w <0ŒÅ’è>.w <identify>.B <attribute>.B ?.4w <0x22ŒÅ’è>.B <mail_body>.?B
+	ƒ[ƒ‹‚ğ‘I‘ğóM
+S 0243 <num>.l
+	ƒ[ƒ‹íœ
+S 0244 <num>.l
+	ƒ[ƒ‹ƒAƒCƒeƒ€‚ÌóM—v‹
+R 0245 <flag>.B
+	flag=0 : ƒ[ƒ‹ƒAƒCƒeƒ€‚ğóM‚µ‚Ü‚µ‚½B
+	flag=1 : ƒ[ƒ‹ƒAƒCƒeƒ€‚ğóM‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½B
+	flag=2 : ƒAƒCƒeƒ€‚Íƒ[ƒ‹‚É‚Ä•ÛŠÇ‚³‚ê‚Ä‚¢‚Ü‚·B
+S 0246 <type>.w
+	type=0 : ƒ[ƒ‹‚ğo‚·ƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½
+	type=2 : ‹àŠzİ’èƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½
+S 0247 <index>.w <amount>.l
+	ƒ[ƒ‹‚ÉƒAƒCƒeƒ€‚âZeny‚Ì“Y•t‚ğs‚Á‚½
+S 0248 <len>.w <nick>.24B <title>.40B <body>.?B
+	ƒ[ƒ‹‘—M
+R 0249 <fail>.B
+	ƒ[ƒ‹‘—M‰Â”Û
+	fail=0 : ƒ[ƒ‹‘—M‚É¬Œ÷‚µ‚Ü‚µ‚½B
+	fail=1 : ƒ[ƒ‹‘—M‚É¸”s‚µ‚Ü‚µ‚½Bó‚¯æ‚él‚ª‘¶İ‚µ‚Ü‚¹‚ñB
+R 024a <num>.l <nick>.24B <title>.40B
+	V’…ƒ[ƒ‹‚ª“Í‚«‚Ü‚µ‚½
+S 024b <type>.w
+	‹£”„ƒEƒBƒ“ƒhƒE‚ÌƒAƒCƒeƒ€“o˜^‰æ–Ê
+S 024c <index>.w <flag>.l
+	‹£”„ƒEƒBƒ“ƒhƒE‚ÌƒAƒCƒeƒ€“o˜^‰æ–Ê‚ÉƒAƒCƒeƒ€‚ğæ‚¹‚½
+	æ‚¹‚½‚ç<flag>‚Í1H
+S 024d <start_zeny>.l <end_zeny>.l <time>.w
+	‹£”„‚ÉƒAƒCƒeƒ€“o˜^
+S 024e <?>.l
+	–¢’²¸
+S 024f <?>.l <?>.l
+	–¢’²¸
+R 0250 <type>.B
+	type=0 : ‹£”„“o˜^‚ª¸”s‚µ‚Ü‚µ‚½B
+	type=1 : ‹£”„“o˜^‚ª¬Œ÷‚µ‚Ü‚µ‚½B
+	type=2 : ŠY“–‚Ì‹£”„‚ªæ‚èÁ‚³‚ê‚Ü‚µ‚½B
+	type=3 : “üDÒ‚ª‚¢‚é‹£”„‚Íæ‚èÁ‚·‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñB
+	type=4 : ‚±‚êˆÈã‹£”„“o˜^‚ğ‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB
+	type=5 : ‹£”„è”—¿‚ª•s‘«‚µ‚Ä‚¢‚Ü‚·B
+	type=6 : ŠY“–‚Ì‹£”„‚É‘Î‚·‚é“üD‚ª¬Œ÷‚µ‚Ü‚µ‚½B
+	type=7 : ŠY“–‚Ì‹£”„‚É‘Î‚·‚é“üD‚ª¸”s‚µ‚Ü‚µ‚½B
+	type=8 : ƒ[ƒj[‚ª\•ª‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+	type=9 : ‚±‚êˆÈã‹£”„ƒAƒCƒeƒ€‚É“üD‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñB
+	‘¼‚Í‘S‚Ä–³‹
+S 0251 <?>.6B <name>.24B
+	‹£”„ƒEƒBƒ“ƒhƒE‚ÌƒAƒCƒeƒ€ŒŸõ
+R 0252 <len>.w <?>.l <loop?>.l { <?>.80B <?>.w <?>.B }*
+	–¢’²¸
+R 0253 <skilllv>.B
+	‘¾—z‚ÆŒ‚Æ¯‚ÌŠ´îƒZ[ƒu—pƒƒbƒZ[ƒWuˆê“xw’è‚·‚é‚Æ•ÏX‚Í•s‰Â”\‚Å‚·Iv
+S 0254 <skilllv>.B
+	0253‚Ìƒ_ƒCƒAƒƒOBOX‚ÅOKƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½
+R 0255 <?>.w <fail>.B
+	fail=0 : –³”½‰
+	fail=1 : ŠY“–‚ÌƒAƒCƒeƒ€‚Íƒ[ƒ‹‚É“Y•t‚Å‚«‚È‚¢ƒAƒCƒeƒ€‚Å‚·B
+R 0256 <?>.w <?>.B
+	–¢’²¸
+R 0257 <num>.l <fail>.l
+	fail=0 : ƒ[ƒ‹íœ¬Œ÷
+	fail=1 : ƒ[ƒ‹íœ¸”s
+S 0258
+	ƒƒOƒCƒ“—v‹‚É•t‰Á‚³‚ê‚éƒpƒPƒbƒgBnProŠÖŒWB
+R 0259
+	nProŠÖŒWB0228‘—MŒã‚Ì•Ô“šB
+R 025a <len>.w { <itemid>.l }*<len>
+	‰½‚©‚ÌƒAƒCƒeƒ€ƒŠƒXƒg
+S 025b <len>.w <itemid>.w
+	ƒAƒCƒeƒ€‘I‘ğAƒLƒƒƒ“ƒZƒ‹‚Í<itemid>‚É0xffff‚ª“ü‚é
+	<len>‚Í0x25a‚ÌƒpƒPƒbƒg’·‚ª‚»‚Ì‚Ü‚Ü•Ô‚é
+S 025c <type>.w
+	‹£”„ƒEƒBƒ“ƒhƒE
+	type=0 : ©•ª‚Ìo•iƒAƒCƒeƒ€‚ğ•\¦
+	type=1 : “üD’†‚ÌƒAƒCƒeƒ€‚ğ•\¦
+R 025d <type>.l
+	type=0 : ŠY“–‚Ì‹£”„‚ğI—¹‚µ‚Ü‚µ‚½B
+	type=1 : ŠY“–‚Ì‹£”„‚ğI—¹‚Å‚«‚Ü‚¹‚ñB
+	type=2 : ‹£”„”Ô†‚ª³Šm‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
+R 025f <0ŒÅ’è>.4B
+	‹£”„ƒEƒBƒ“ƒhƒE‚ğŠJ‚­
+	‚·‚®‚ÉƒT[ƒo‚É0x251‚ª‘—M‚³‚ê‚é
+R 0260 <0ŒÅ’è>.4B
+	ƒ[ƒ‹BOX‚Ì•\¦
+S 0273 <mail_num>.l <nick>.24B
+	ROƒ[ƒ‹‚Ì’…Mƒ[ƒ‹ƒEƒBƒ“ƒhƒE‚Åˆê”Ô¶‚Ìƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚½
+	<nick>‚Ì‘Šè‚É<mail_num>‚Ìƒ[ƒ‹‚ğ•Ô‘—‚·‚é
+R 0274 <mail_num>.l <fail>.w
+	fail=0 : ƒ[ƒ‹‚ª•Ô‘—‚³‚ê‚Ü‚µ‚½
+	fail=1 : ƒ[ƒ‹‚ª‘¶İ‚µ‚Ü‚¹‚ñ
+R 027b <val1>.l <val2>.l <val3>.l
+	ƒIƒŒƒ“ƒWF‚Å•¶š‰»‚¯ƒAƒiƒEƒ“ƒX‚ª—¬‚ê‚é
+	PC•”‰®ƒCƒxƒ“ƒg : ŒoŒ±’l‘‰Á <val1>%, €–SŒoŒ±’l <val2>%, ƒhƒƒbƒv—¦‘‰Á <val3>%
+
+S 027c <version>.l <account name>.24B <password>.24B <?>.5B <version2>.B
+	ƒAƒJƒEƒ“ƒgID&ƒpƒXƒ[ƒh‘—M
+R 027d <?>.24B <?>.w*15 <?>.4B?
+	–¢’²¸
+R 0280 <point>.l <total>.l <type>.w
+	ƒeƒCƒ~ƒ“ƒOƒ~ƒbƒVƒ‡ƒ“ƒ‰ƒ“ƒLƒ“ƒOƒ|ƒCƒ“ƒg‚ª<point>ã¸‚µ‚Ä<total>‚É‚È‚è‚Ü‚µ‚½B
+	type=0xfd2ŒÅ’è
+	‘¼‚Í•¶š‰»‚¯‚·‚é
+S 0281 <54000ŒÅ’è?>.w
+	–¢’²¸A‚½‚Ô‚ñƒeƒCƒ~ƒ“ƒOƒ‰ƒ“ƒLƒ“ƒO—v‹ƒpƒPƒbƒg‚Æ‚µ‚ÄÀ‘•‚³‚ê‚é
+R 0282 { <charname>.24B }*10 { <point>.l }*10
+	ƒeƒCƒ~ƒ“ƒOƒ‰ƒ“ƒLƒ“ƒO
+R 0284 <ID>.l <type>.l <?>.4B?
+	bl‚©‚ç”­¶‚·‚éƒGƒtƒFƒNƒgA1f3‚ÌãˆÊŒİŠ·H
+R 0285 <val1>.w <val2>.w
+	–¢’²¸A“äB
+	val1‚ª01,02,03,04,05,0b,0c,0f‚Ì‚Æ‚«”½‰A¡‚Ì‚Æ‚±‚ëuNO MSGv
+	‚»‚êˆÈŠO‚Ìê‡‚Íu???v‚ª‰æ–Êã•”‚Éƒsƒ“ƒN•¶š‚Å•\¦‚³‚ê‚é
+	val1‚ª04‚Ì‚Æ‚«Aval2=0`5‚Åswitch‚ ‚èiSTR‚Æ‚©HjA¡‚Ì‚Æ‚±‚ëuNO MSGv
+
+
+==========================================================================
+ EOF
+--------------------------------------------------------------------------

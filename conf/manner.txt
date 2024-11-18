@@ -1,0 +1,2236 @@
+//--------------------------------------------------------------
+//               (c)2004-2007 Freya Team Presents:              
+//                 ___   ___    ___   _  _   __                 
+//                (  _) (  ,)  (  _) ( \/ ) (  )                
+//                (  _)  )  \   ) _)  \  /  /__\                
+//                (_)   (_)\_) (___) (__/  (_)(_)               
+//                    http://www.ro-freya.net                   
+//--------------------------------------------------------------
+//
+//--------------------------------------------------------------
+// Freya Manner Configuration File
+//--------------------------------------------------------------
+// 2 types of lines:
+// language: <npc_language>
+//           as defined is map_freya.conf.
+//           All lines (simple word or sentence) after this line
+//           until the next 'language' line are used to define
+//           forbidden word/sentence.
+//           Language definition can be found on ISO 639 (639-1):
+//           http://www.w3.org/WAI/ER/IG/ert/iso639.htm or
+//           http://fr.wikipedia.org/wiki/ISO_639
+//           Country definition (ISO 3166-1-alpha-2 code elements):
+//           http://www.iso.org/iso/fr/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html
+//           Example: en_US (english in US), en_EN (english in England)
+// <line>
+//       is a 'simple word' or a 'sentence'.
+//       All lines following the 'language' are bad words.
+//       For lines, case sensitive is not important.
+//--------------------------------------------------------------
+
+
+//--------------------------------------------------------------
+// english (american)
+language: en_US
+
+( ^ )^_^( ^ )
+(^)^_^(^)
+)>
+,,I,,
+,,I,,^-^,,I,,
+,.|..
+..l..
+..l..^o^..l..
+..|.,
+..|., (o_o),.|..
+..||..
+<(
+\/\/hore
+\\/\//hore
+ass
+asses
+asshole
+assholes
+assholic
+b i t c h
+b it ch
+b itc h
+bastard
+bastards
+bi t ch
+biaaaaatch
+biatch
+bioootch
+biotch
+bitc h
+bitch
+bitches
+bizitch
+biznatch
+Boner
+c u n t
+c u nt
+chink
+cI_Int
+cl_lnt
+clit
+cock
+Cocksucker
+cu n t
+cu nt
+cum
+cun t
+cunnilingus
+cunt
+c|_|nt
+dam
+damm
+damn
+Dickhead
+Dike
+Dilldos
+Douche
+dumb
+dumbass
+dumbasses
+dumber
+dumbfvck
+Dyke
+f o ck
+f o k
+F U C K
+f u ck
+f uck
+f@get
+f@ggot
+f@got
+f_u_c_k
+faget
+fagget
+faggot
+faggots
+fagot
+fala tio
+fcuk
+fI_Ick
+fl_lck
+fo ck
+foc k
+fock
+fu c k
+fu ck
+fuc
+fuc.k
+fuck
+fucked
+fucker
+fuckers
+fucking
+fuk
+fuker
+fukers
+fuking
+fuuck
+fuuuck
+fuuuuck
+fvck
+f|_|ck
+gook
+hairy snatch
+Hooker
+I hate the gms
+Jackoff
+jailbait
+l31tcI-I
+Lesbo
+Masterbate
+masturbator
+motherfuck
+motherfucker
+motherfuckers
+motherfucking
+niger
+Nigger
+noob
+noober
+noobs
+nub
+nubber
+nubs
+penis
+pennis
+phoney
+phuck
+Poontang
+poser
+posers
+Prostitute
+pussy
+Queer
+screw
+shit
+shut up
+sit on it and rotate
+slut
+sperm
+Tramp
+Twat
+vulva
+wanna be
+wannabe
+wannabes
+Whore
+WTF
+w||-||ore
+zipperhead
+zipperheadtute
+||-||oe
+
+
+
+//--------------------------------------------------------------
+// français (Canada)
+language: fr_CA
+
+Callis
+Ciboire
+Criss
+Tarbanack
+Collis
+ostie
+pute
+saloppe
+
+
+
+//--------------------------------------------------------------
+// français (France)
+language: fr_FR
+
+( ^ )^_^( ^ )
+(^)^_^(^)
+)>
+,,I,,
+,,I,,^-^,,I,,
+,.|..
+..l..
+..l..^o^..l..
+..|.,
+..|., (o_o),.|..
+..||..
+//abruti
+//bare-toi
+//barre-toi
+//imbecil
+//imbecile
+//imbeciles
+//imbecils
+//imbécil
+//imbécile
+//imbéciles
+//imbécils
+//meeerde
+//meerde
+//merde
+//pipe
+//pipes
+<(
+\/\/hore
+\\/\//hore
+anus
+baise
+baisee
+baisent
+baiser
+baises
+baisé
+baisée
+baisées
+baisés
+baiz
+bande de tâches
+bander
+barez-vous
+barrez-vous
+batard
+batarde
+batardes
+batards
+bite
+bites
+bitte
+bittes
+bondage
+bondages
+bonnasse
+bonnasses
+bordel
+bordels
+branle
+branler
+branles
+branlette
+branlettes
+branlé
+branlés
+bâtard
+bâtarde
+bâtardes
+bâtards
+bèz
+c o n
+c o*n
+c o^n
+c o_n
+c*o n
+c*o*n
+c*on
+c^o n
+c^o^n
+c_o n
+c_o_n
+caca
+cacas
+casse-toi
+cassez-vous
+chatte
+chiasse
+chie
+chient
+chier
+chié
+chiées
+chiés
+cI_Int
+cl_lnt
+clitau
+clito
+co n
+co*n
+cocu
+cocus
+con
+con nard
+con nards
+conar
+conard
+conarde
+conardes
+conards
+conasse
+conasses
+connar
+connard
+connarde
+connardes
+connards
+connasse
+connasses
+conne
+Connerie
+Conneries
+connes
+cons
+couille
+couilles
+couye
+couyes
+creve
+crève
+cul
+culs
+cuni
+cunilingus
+c|_|nt
+de ta mer
+de ta mere
+de ta mèr
+de ta mère
+debil
+debile
+debiles
+débil
+débile
+débiles
+echangisme
+emerde
+emerdent
+emerder
+emerdeur
+emerdeurs
+emerdeuse
+emerdeuses
+emerdé
+emerdée
+emerdés
+emmerde
+emmerdent
+emmerder
+emmerdeur
+emmerdeurs
+emmerdeuse
+emmerdeuses
+emmerdé
+emmerdée
+emmerdés
+en cul
+en cule
+en culer
+en cules
+encule
+enculer
+encules
+enculé
+enculés
+enfoiré
+enfoirée
+enfoirées
+enfoirés
+et ta mere
+et ta mère
+exta
+f o ck
+f o k
+F U C K
+f u ck
+f.uck
+f_u_c_k
+faire mettre
+fcuk
+fcvk
+fela tion
+felation
+fella tion
+fellation
+fI_Ick
+fl_lck
+fo ck
+foc k
+fock
+foutoir
+foutoire
+foutre
+foutrement
+fu c k
+fu ck
+fu.ck
+fuc
+fuc.k
+FUCK
+fuk
+fuque
+fuuck
+fuuuck
+fuuuuck
+fuuuuuck
+fvck
+f|_|ck
+féla tion
+féla tions
+félation
+félations
+gouine
+gouines
+gouinne
+gouinnes
+groniasse
+groniasses
+I hate the gms
+Je deteste les gms
+k o n
+k o*n
+k o^n
+k o_n
+k*o n
+k*o*n
+k*on
+k^o n
+k^o^n
+k_o n
+k_o_n
+ko n
+ko*n
+kon
+konasse
+konasses
+konnasse
+konnasses
+kons
+l31tcI-I
+Lesbien
+Lesbiene
+Lesbienes
+lesbienne
+Lesbiens
+Lesbo
+Lesbos
+maso
+masturbator
+masturbe
+masturber
+masturbé
+masturbée
+masturbées
+masturbés
+meeerdes
+meeerdeux
+meerdes
+meerdeux
+merdes
+merdeux
+morveuse
+morveuses
+morveux
+mouille
+nasi
+nasis
+nazi
+nazis
+negre
+negres
+negrillon
+negrillons
+negro
+negros
+nibard
+nibards
+nichon
+nichons
+nik
+nike
+nique
+niquer
+niqué
+niquée
+niquées
+niqués
+nègre
+nègres
+négrillon
+négrillons
+négro
+négros
+ordure
+ordures
+p u t a i n
+p u t a i n s
+partouse
+partouses
+partouze
+partouzes
+pd
+pdd
+pddd
+pdddd
+pddddd
+pdddddd
+pddddddd
+pds
+pedale
+pedales
+pede
+pederaste
+pederastes
+pedes
+penis
+pennis
+petasse
+petasses
+phuck
+pignouf
+pignoufette
+pignoufettes
+pignoufs
+pisse
+pissee
+pissees
+pisser
+pisses
+pissé
+pissée
+pissées
+pissés
+plouc
+ploucs
+plouk
+plouks
+porno
+pornos
+pouffiass
+pouffiasse
+pouffiasses
+poufiasse
+pouf­fiass
+pouf­fiasse
+pouf­fiasses
+Prostitue
+Prostituee
+Prostituees
+Prostitues
+Prostitué
+Prostituée
+Prostituées
+Prostitués
+prout
+put
+put ain
+put ains
+put in
+put ins
+put1
+putain
+putains
+pute
+putes
+putin
+putins
+putte
+puttes
+puttin
+puttins
+pédale
+pédales
+pédé
+pédéraste
+pédérastes
+pédés
+pénétration
+pétasse
+pétasses
+s e x
+s e x e
+s e x*e
+s e xe
+s e*x
+s ex
+s ex e
+s ex*e
+s exe
+sado
+salau
+salaud
+salauds
+salaus
+salaut
+salauts
+sale arabe
+sallo
+sallop
+sallopard
+sallopards
+sallope
+sallopes
+salloppard
+salloppards
+salloppe
+salloppes
+sallos
+sallot
+sallots
+salo
+salop
+salopard
+salopards
+salope
+salopes
+saloppard
+saloppards
+saloppe
+saloppes
+salos
+salot
+salots
+se x
+se*x
+sex
+sex e
+sex*e
+sexe
+shit
+skinhead
+sodomie
+sodomise
+sodomisee
+sodomisees
+sodomisent
+sodomiser
+sodomises
+sodomisé
+sodomisée
+sodomisées
+sodomisés
+sperm
+sperme
+spermes
+suce
+suck
+tete de noeud
+tetes de noeud
+tête de noeud
+têtes de noeud
+va te faire
+va te fer
+va te fere
+va te fèr
+va te fère
+vagin
+vagins
+w||-||ore
+zizi
+zizis
+||-||oe
+
+
+
+//--------------------------------------------------------------
+// Chinese
+language: ch_CH
+
+ah gua
+ah kua
+cb
+chau chee buy
+chau chee bye
+chau cheebuy
+chau cheebye
+chau hai
+chauhai
+chee bek
+chee buy
+chee bye
+chee pek
+cheebek
+cheebuy
+cheebye
+cheepek
+ci bai
+cibai
+cibek
+diu
+du lan
+du len
+gong
+hai
+ham ka can
+ham ka chan
+ji bai
+jibai
+jibek
+kan nin na
+kan
+kanasai
+keongkan
+Keong
+keong kan
+knn
+kuai lan
+kuailan
+kwai lan
+kwailan
+lam pa
+lam pah
+lampa
+lampah
+lanpa
+lan ciao
+lanciao
+lan jiao
+lan pa
+lan pah
+lan
+lan tiao
+lap sap
+lap-sap
+lapsap
+le ma
+leh mah
+leh mar
+leh ma
+lei mar
+lei ma
+lei mah
+lema
+lou dao
+lou mou
+lou tao
+ma de
+ma leh
+mah hai
+mah leh
+mahai
+maleh
+mar leh
+na bei
+nabei
+nabe
+nah bei
+nia seng
+nia sing
+pok gai
+pokai
+pokgai
+pokkai
+poo key
+poo key mug
+pookey
+Pu bor
+pu nia bu
+Pubor
+puki
+pukima
+puniabu
+sau pei
+sau seng
+sei
+si gina
+si ginna
+soh hai
+sohai
+sorhai
+tiu
+tu lan
+tu len
+tulan
+
+
+
+//--------------------------------------------------------------
+// German
+language: de_DE
+
+arsch
+Arschloch
+Bastard
+blöd
+blödes
+Fehlgeburt
+fotze
+hure
+Hurensohn
+idiot
+Mistgeburt
+nutte
+pisser
+schlampe
+schwanz
+stricher
+votze
+wichser
+wixer
+
+
+
+//--------------------------------------------------------------
+// Spanish (mexico)
+language: es_MX
+
+( ^ )^_^( ^ )
+(^)^_^(^)
+)>
+,,I,,
+,,I,,^-^,,I,,
+,.|..
+..l..
+..l..^o^..l..
+..|.,
+..|., (o_o),.|..
+..||..
+<(
+\/\/Pendejo
+\\/\//Pendejo
+culo
+Pendejo
+Pendejos
+Pendejisimo
+Pendeja
+Pendejas
+p e r r a
+p er ra
+pe rr a
+perra
+Bastardo
+perras
+pene
+picho
+chupapichos
+eyacular
+estupido
+estupida
+es tu pi do
+gay
+homosexual
+homo sexual
+perra
+malnacido
+malnacida
+malnacidos
+perros
+chinga
+chingas
+puta
+putas
+putamadre
+putamadres
+pedo
+pepa
+tuche
+vagina
+verga
+prostituta
+maldita
+malditos
+maldito
+prosti
+lame huevos
+ano
+jodete
+jodeme
+joda
+cagar
+cagaste
+
+
+
+//--------------------------------------------------------------
+// Finland
+language: fi_FI
+
+hintti
+homo
+horatsu
+huora
+lesbo
+perkele
+saatana
+vittu
+
+
+
+//--------------------------------------------------------------
+// Italiano
+language: it_IT
+
+CAZZO
+FIGA
+TETTE
+CULO
+VAFFANCULO
+MERDA
+PEZZO DI MERDA
+STRONZO
+PIGLIATELO IN CULO
+TROIA
+PUTTANA
+PUTTANA TROIA
+FIGLIO DI TROIA
+FIGLIO DI PUTTANA
+PORCA TROIA
+CORNUTO
+TESTA DI CAZZO
+VAI A MORIRE AMMAZZATO
+FOTTITI
+E CHI SE NE FOTTE
+MINCHIA
+VACCA MERDA
+VADA VIA IL CU
+PUTTANA MERDA
+BAGASCIA
+TESTA DI MINCHIA
+MINCHIA MOLLE
+BASTARDO
+BASTARDO DI MERDA
+BASTARDO DEL CAZZO
+MIGNOTTA
+FIGLIO DI MIGNOTTA
+ECCHISENEFREGA
+ZOCCOLA
+
+
+
+//--------------------------------------------------------------
+// Korean
+language: kr_KR
+
+babo
+cae sheki
+cae sseki
+chae su
+chaesu
+doraii
+pyungshin
+shi bal
+ssi bal
+ssibal
+tatcho
+zzang na
+
+
+
+//--------------------------------------------------------------
+// Burmese
+language: my_MY
+
+bodo
+bodoh
+busuk
+c1ba1
+celaka
+cilaka
+goblok
+jalang
+kimak
+ngentot
+pantat
+puki
+pukimak
+pundek
+sial
+toyol
+
+
+
+//--------------------------------------------------------------
+// Philippines
+language: ph_PH
+
+angas
+baliw
+bobo
+buang
+bulok
+gaga
+gago
+giatay
+igit
+ingak
+iyot
+kalungaton
+kantut
+kantutan
+letsi
+pesti
+pota
+potangina
+puta
+sawsaw
+tae
+tarantado
+tubol
+ugok
+ungas
+yawa
+
+
+
+//--------------------------------------------------------------
+// portuguese (Brazil)
+language: pt_BR
+
+( ^ )^_^( ^ )
+(^)^_^(^)
+,,I,,
+,,I,,^-^,,I,,
+,.|..
+..l..
+..l..^o^..l..
+..|.,
+..|., (o_o),.|..
+..||..
+4LHO
+==D
+\/\/hore
+\\/\//hore
+_|_
+aIho
+ALH0
+b a b a c a
+B I C H A
+b i t c h
+b it ch
+b itc h
+B O C E T A
+B U C E T A
+B.A.B.A.C.A
+B.I.C.H.A
+B.O.C.E.T.A
+B.U.C.E.T.A
+B_A_B_A_C_A
+b_i_c_h_a
+B_O_C_E_T_A
+B_U_C_E_T_A
+BA BA CA
+BAABACA
+BABAACA
+babaca
+babacaa
+babacaaaa
+BAITOLA
+BEIRA-MAR
+bi t ch
+biaaaaatch
+biatch
+bicha
+bioootch
+biotch
+bitc h
+bitch
+bizitch
+biznatch
+BO CE TA
+BOCEETA
+boceta
+bocetaaaa
+boiola
+Boner
+BOQUETE
+Bosta
+BU CE TA
+buceeta
+buceta
+bucetaaaa
+c a r a l h o
+c u n t
+c u nt
+c.a.r.a.l.h.o
+c.aralho
+C.V.
+C_A_R_A_L_H_O
+c_aralho
+c_ralho
+ca.ralho
+ca_ralho
+cacete
+cara!ho
+CARA.LHO
+cara_lho
+caralho
+chink
+cI_Int
+cl_lnt
+clit
+cock
+Cocksucker
+comando vermelho
+COMANDO.VERMELHO
+comando_vermelho
+CRALHO
+cu n t
+cu nt
+cun t
+cunnilingus
+cunt
+CUZÃO
+cuzão
+c|_|nt
+CÚ
+cú
+Dickhead
+Dike
+Dilldos
+Douche
+dumbfvck
+Dyke
+esporr
+eu odeio a level up
+eu odeio os gms
+f o ck
+f o d a
+f o d e
+f o d i
+f o k
+F U C K
+f u ck
+F U D E
+F U D I
+f uck
+f()
+f()da
+F()DE
+F()DI
+F.0O
+F.O.D.A
+F.O.D.E
+f.o.d.i
+F.O0
+F.OO
+F.U.D.E
+F.U.D.I
+f.uck
+f.uu
+F.VV
+f0da
+f0de
+f0di
+F0O
+F[]
+f[]da
+F[]DE
+f[]di
+f_o_d_a
+F_O_D_E
+F_O_D_I
+f_u_c_k
+f_u_d_e
+f_u_d_i
+fcuk
+fcvk
+fda
+fde
+fdi
+fI_Ick
+fl_lck
+fo ck
+fo da
+FO DE
+fo di
+fo.da
+fo.de
+fo.di
+fo0
+foc k
+fock
+FODA
+fode
+FODI
+FOO
+fu c k
+fu ck
+FU DE
+fu di
+fu.ck
+fu.de
+FU.DI
+fuc
+fuc.k
+FUCK
+FUDE
+fudi
+fuk
+fuu
+fuuck
+fuuuck
+fuuuuck
+fvck
+FVDE
+fvdi
+fvv
+F|_|
+f|_|ck
+F|_|DE
+F|_|DI
+gook
+hairy snatch
+Hooker
+I hate gravity
+I hate the gms
+Jackoff
+jailbait
+k.ralho
+K_RALHO
+KARALHO
+kra!ho
+KRALHO
+l31tcI-I
+Lesbo
+M E R D A
+M.E.R.D.A
+m.erda
+m=D
+M_E_R_D_A
+M_ERDA
+Masterbate
+masturbator
+MEEEEEEER
+meeeeeer
+meeeeer
+meeeer
+MEEER
+meer
+mer.da
+mer_da
+merda
+niger
+Nigger
+no cu
+P O R R A
+p u t a
+P.C.C
+p.o.r.r
+P.U.T.A
+P.UTA
+P_O_R_R
+p_orr
+p_u_t_a
+p_uta
+PCC
+PEDERASTA
+penis
+pennis
+phoda
+phode
+PHODI
+phuck
+phude
+PHUDI
+piranha
+po_rr
+Poontang
+POOOOORR
+poooorr
+POOORR
+poorr
+POR_RA
+PORR_
+PORRA
+porrr
+Prostitut
+PU.TA
+PU7A
+PU_TA
+punheta
+pussy
+puta
+PUUT
+pvta
+p|_|
+que cu
+SEU CU
+sit on it and rotate
+slut
+sua galinha!
+SUA VACA!
+suruba
+TERCEIRO COMANDO
+TERCEIRO.COMANDO
+TERCEIRO_COMANDO
+Twat
+V I A D O
+V.I.A.D.O
+V_I_A_D_O
+vaca
+VEADO
+VIADO
+vulva
+Whore
+w||-||ore
+xereca
+XOXOTA
+zipperhead
+zipperheadtute
+||-||oe
+
+
+
+
+//--------------------------------------------------------------
+// russian
+language: ru_RU
+
+eban
+ebat
+hue
+huy
+pizd
+srat
+stal
+suka
+suke
+suki
+suku
+xyu
+áëÿ
+åáàí
+åáàò
+æîï
+ìëÿò
+ïèçä
+ñðàë
+ñðàò
+ñóêà
+ñóêè
+ñóêî
+ñóêó
+ñó÷êà
+ñó÷êè
+ñó÷êî
+ñó÷êó
+ñöóêà
+ñöóêå
+ñöóêè
+ñöóêî
+ñöóêó
+õóå
+õóè
+õóé
+õóÿ
+øëþõà
+øëþõè
+øëþõî
+øëþõó
+
+
+
+//--------------------------------------------------------------
+// thai
+language: th_TH
+
+$hit
+,,l,,
+..l..
+.¤.Ç.Â.
+8:
+8;
+8=
+@ss
+D A M
+Dad Die
+Dog ÍÖé´ your mother
+E RAT
+F      U      C     K
+F   u   c   k   U
+F  U  C  K  YOU
+F A C K
+F U C K
+F(_)CK
+F+U+C+K
+F.U.C.K
+F@ck
+FUCK
+FUG
+F_U_C_K_U
+Fu(k
+FuIck
+Fuc.k
+GADOR
+Ga door
+H I E
+I  hui
+I HEY
+I LOW
+I-HERE
+I-SAD
+K U Y
+K V Y
+K uy
+K(_)Y
+K-------u-------y
+K-V-Y
+K-u-y
+K=U=Y
+KKKKUUUUUUYYYY
+KUAY
+KUY 
+Ka doll
+Ku y
+Kuy
+Kvvy
+Pennis
+Rayum
+S E X
+S EX
+S H I T
+S-U-D
+SEX
+SH IT
+SHI T
+SHIT
+SHlT
+Stuped
+SuDDDD
+Sucka
+Sucker
+Yed Mea
+Yet Yet
+ass hole
+asshold
+asshole
+b i t c h
+b it ch
+b itc h
+baka
+bi t ch
+bit.ch
+bitc h
+bitch
+budsob
+budsop
+bullshit
+c u n t 
+c u nt
+cock
+cu n t
+cu nt
+cum
+cun t
+cunt
+dad u die
+dad you dead
+dam it
+damit
+damn
+dick
+dildo
+dorr
+e dog
+e hia
+e hoy
+e na dan
+e sud
+e wain
+e wane
+e wen
+e- doog
+e-dog
+e.dog
+f   uu    c  k
+f  u   c  k
+f  uck
+f U c  K
+f o ck
+f o k
+f u c k
+f u c k y o u
+f u ck
+f uck
+f v c k
+f*ck
+f*u*c*k
+f+u+c+k 
+f-----------uck
+f-u-c-k
+f-u-c-k-y-o-u
+f......u.......c.......k........
+f..u....c.....k
+f..u..c..k..
+f..u.c.k
+f.u.
+f.u.c.k.
+f.u.c.k.y.o.u.
+f.uck
+f.you
+father die
+father ming daed ror
+father u died
+father you dead
+father you died
+father your dead
+fatherdie
+fu  ck
+fu c k
+fu ck
+fu k
+fu yuck
+fu*k
+fu...k
+fu.ck_u
+fu__________ck
+fuc  k
+fuc k
+fuc u
+fucck
+fuck
+fuck you
+fuckyou
+fuc|(
+fugly
+gadoor
+goddamn
+h e a
+h e e
+h ee
+h.i.a
+he e
+headcock
+hee ban
+heehak
+holy shit
+hooker
+i .......sud.....
+i aon
+i heer
+i here
+i hie
+i hok
+i kajok
+i na hee
+i nar hee
+i ne hee
+i noo
+i-sud
+jaew
+jan rai
+jangrai
+jeaw
+jeddo
+jerk
+jun rai
+k            u           y
+k       y
+k    u      y
+k    u    y
+k   u   y
+k   v    y  
+k   v   y
+k  u  y
+k  v  y
+k u a y
+k u y
+k uy
+k v y
+k vy
+k**u**y
+k+u+y
+k-uy
+k......u.........y........
+k......u......y......
+k.....u.......y
+k....u.....y
+k...u...y...
+k...uy
+k...v...y
+k..u.
+k..u..y
+k..uy
+k..v..y
+k..v.y
+k.u.y
+k.u.y.
+k.uy
+k.v..y
+k.v.a.y
+k.v.y
+k.v.y.
+k/uy
+kkkkkuuuuuuyyyyy
+kkkkuuuuuuuyyyyyyyyyyy
+kkkkuuuuyyyyy
+kkuuyy
+ku y
+ku-y
+ku...y
+ku..y
+ku=y
+kuai
+kuay
+kuay
+kuoy
+kuuuy
+kuuy
+kuy
+kv y
+kv y
+kv.y
+kvay
+kvvvvvvvvvvvvyyyyyy
+kvy
+kway
+kwy
+kyu
+kyw
+k~u~y
+kÇÂ
+layam
+mae yed
+maeyet
+mamungtay
+mang yed
+masterbate
+mather you dead
+mea mung
+mother die
+mother died
+mother fucker
+mother ming daed ror
+motherfucker
+na hee
+na here
+na hree
+naa hee
+nahee
+penis
+pennis
+piss off
+po mung die
+po mung tai
+por dead
+por die
+por meung tai
+por ming tar
+por mueng
+por mueng ror
+por mun die ror
+por mun try
+por mung
+por tai
+por u die
+por u tai
+por ung
+por you tai
+pormung
+portay
+pussy
+pussy
+quai
+ra yam
+rayam
+s H it
+s h i t
+s hit
+s u c k
+s u d
+s ud
+saad
+sadd
+sadnarok
+sh it
+sh!t
+shi t
+shid
+shit
+slut
+sonteen
+su d
+suck
+sud teen
+sudteen
+sux
+vagina
+vian
+vigina
+vulva
+wain
+y e d
+y ed
+yad
+ye d
+yea ke
+yed
+yet  mather !
+yet hear
+yet mae
+yet mai
+yet mang
+yet mea
+yetmai
+yettamon
+your father dead
+your father die
+your father die ?
+your father die?
+your mother dead
+¡ÃÐ ´Í
+¡ÃÐ¨Ùë
+¡ÃÐ´Í
+¡ÃÐ·ÇÂ
+¡ÃÐÊÑ¹
+¡ÃÐÊÑ¹
+¡ÃÐËÃÕè
+¡ÃÐà¨ÕéÂÇ
+¡ÃÐà¨ÕêÂÇ
+¡ÃÐà¨ÕëÂÇ
+¡ÃÐà´éÒ
+¡Ð´Í
+¡ÐÊÑ¹
+¡ÐËÃÕè
+¡Ðà¨ÕêÂÇ
+¡Ðà¨ÕêÂÇ
+¡Ðâ»¡
+¡Ò¨Ùë
+¡Ò´Í
+¡ÒËÃÕè
+¡Òà¨ÕéÂÇ
+¡Ù
+¢ÍÃÇÁà¾ÈË¹èÍÂ
+¢ÒÂµÑÇ
+¤                       Ç    Â
+¤                      ÇÂ
+¤          Ç               Â
+¤          Ç      Â
+¤         Ç        Â
+¤        Ç     Â
+¤       Ç       Â
+¤      Ç         Â
+¤     Ç      Â
+¤     Ç     Â
+¤     ÇÂ
+¤    Ç    Â
+¤    Ç   Â 
+¤   Ç                 Â
+¤   Ç   Â
+¤   Ç   Â   
+¤   ÇÂ
+¤  Ç   Â
+¤  Ç  Â
+¤  Ç Â
+¤ . Ç . Â
+¤ Ã Ç Â
+¤ Ã ÇÂ
+¤ ÃÇ Â
+¤ ÃÇÂ
+¤ Ç   Â
+¤ Ç  Â
+¤ Ç Â
+¤ Ç Ò Â
+¤ ÇÂ
+¤ ÇÒ Â
+¤*Â
+¤*Ç*Â
+¤*ÇÂ
+¤+Ç+Â
+¤---Ç---Â
+¤-Â
+¤-Ã-Ç-Â
+¤-Ç-Â
+¤-Ç-Ò-Â
+¤-ÇÂ
+¤......................................Â
+¤........Ç............Â.........
+¤.......Ç*******p
+¤.......Ç*******Â
+¤.....Ç...........Â
+¤....Ç.....Â
+¤...Â
+¤...Ç...Â
+¤..Â
+¤..Ç..Â
+¤..Ç..Â..
+¤.Ã.Ç.Â
+¤.ÃÇÂ
+¤.Ç.Â
+¤.Ç.Â.
+¤.ÇÂ
+¤//Ç//Â
+¤/Ç/Â
+¤\Ç\Â
+¤^Ç^Â
+¤vÂ
+¤~Ç~Â
+¤¤¤¤¤¤ÇÇÇÇÇÇÇÇÇÇÂÂÂÂÂÂ
+¤Ã ÇÂ 
+¤Ã-ÇÂ
+¤ÃÇ Â
+¤ÃÇÂ
+¤Ç     Â
+¤Ç    Â
+¤Ç   Â
+¤Ç Â
+¤Ç*
+¤Ç*Â
+¤Ç--Â
+¤Ç-Â
+¤Ç-Â 
+¤Ç-ÒÂ
+¤Ç...............Â
+¤Ç.Â
+¤Ç­
+¤ÇÂ
+¤ÇÂ
+¤ÇÇÂ
+¤ÇÇÇÂ
+¤ÇÇÇÇÂ
+¤ÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÇÇÇÇÂ
+¤ÇÇÇÇÇÇÇÇÇÇÇÂ
+¤ÇÒÂ¨ÃÔ§æ
+¤ÇÒÂ¨Ô§æ
+¤ÇÒÂÂ
+¤ÇÒÂàÍéÂ
+¤Í-Ç-Â
+¥ Ç Â
+¥ ÇÂ
+¥-Ç-Â
+¥-ÇÂ
+¥Ç Â
+¥Ç-Â
+¥ÇÂ
+¨Ñ­äÃ
+¨Ñ¹äÃ
+¨ÔëÁ
+¨Ùë
+ªÑ¡ÇèÒÇ
+ªÑèÇªéÒ
+ªÒµÔªÑèÇ
+ªÒµÔËÁÒ
+ªÔ§ËÁÒà¡Ô´
+ªÔºËÒÂ
+´ Í
+´Í¡·Í§
+´Í§·Í§
+´Ù´»Ò¡
+´Ù´ÅÔé¹
+´Ù´ËÑÇ¹Á
+´ÙËÑÇ¹Á
+µ Ù´
+µÍáËÅ
+µÕ ¹
+µÕ©Ôè§
+µÕ¹
+µØëÂ
+µÙ ´
+µÙ´
+¶Í¡
+¶ØÂ
+¶èÍÂ
+·ØàÃÈ
+¹Á·ÐÅÑ¡
+¹ÁãË­è¨Ñ§
+¹èÒÁèÍ
+¹èÒËÁéÍ
+¹éÓ¡ÒÁ
+¹éÓáµ¡
+ºÃÔ¡ÒÃ·Ò§à¾È
+ºÑ¡ËÓ
+ºÑ´«º
+ºÕºËÑÇ¹Á
+ºéÒ»èÒÇÇÐ
+ºêÇº
+»Ôê
+¾è Í ÁÖ § µÒ Â
+¾èÍ die
+¾èÍ¤Ô§ËÂÑè§
+¾èÍ¤Ô§áÁè¤Ô§
+¾èÍ¤Ø³àËÃÍ
+¾èÍµÒÂ
+¾èÍÁÃÖ§µÒÂ
+¾èÍÁÃÖ§ÊÔ
+¾èÍÊÔé¹
+¾èÍàÁÔ§
+¾èÍàÁÔ§µÒÂ
+¾èÍáÁè§µÒÂ
+¾èÍáÁèäÁèÊÑè§ÊÍ¹
+¾èÍáÁèäÁèä´éÊÑè§ÊÍ¹
+¾èÍäÁèÊÑè§ÊÍ¹
+¿Ñ¡ ÂÙ
+¿Ñ¡ÂÙ
+ÁÖ  §
+ÁÖ §
+ÁÖ-§
+ÁÖ§
+ÂÑ¡ÊØà¹çµ
+ÂÑ´áÁè
+ÃÐÂÓ
+ÃØÁâ·ÃÁ
+ÃèÇÁà¾È
+ÃèÒ¹
+Å§á¢¡
+ÅÒÇÊÑ´
+ÅÙ¡ÍÕ¡ÐËÃÕè
+ÅÙ¡ÍÕ´Í¡·Í§
+ÅÙ¡ÍÕÊÒ´
+ÅèÍáÁè
+Ê¶Ø¹
+Ê¶ØÅ
+ÊÃÒ´
+ÊÑµÇì¹Ã¡
+ÊÑµÇì¹Õè
+ÊÑµÇìËÁÒ
+ÊÑ¹´Ò¹ËÁÒ
+ÊÑ¹´Ò¹ä¾Ãè
+ÊÒ-´
+ÊÒ´´
+ÊÒ´ËÁÒ
+ÊÒ´àÍéÂ
+ÊÒ´àÍêÂ
+ÊÒÃàÅÇ
+Ë§Õè
+Ë¹éÒ¤ÇÒÂµÑÇàÁÕÂ
+Ë¹éÒµÑÇàÁÕÂ
+Ë¹éÒ»Ô
+Ë¹éÒÁèÍ
+Ë¹éÒË¹Ñ§áµ´
+Ë¹éÒËÁÒ
+Ë¹éÒËÁéÍ
+Ë¹éÒËÃÕ
+Ë¹éÒàÁç´áµ´
+Ë¹éÒàËÃÕéÂ
+ËÁÍÂ
+ËÁÒ¤Òºä»á´¡
+ËÁÒäÁèá´¡
+ËÂÒºªéÒ
+ËÂÕàËÁç¹ 
+ËÍ¡ËÑ¡
+ËÑÇ´Í
+ËÑÇ¹Á
+ËÓ
+ËÓ¡ÃÐÊ×Í
+ËÓËÁÒ
+ËÕ
+Ë×è¹
+ËéÇ´Í
+Í§¤ªÒµÔ
+ÍÁËÑÇ´Í
+ÍÂÒ¡ÁÕ sex
+ÍÂÒ¡ÍÖº
+ÍÂÒ¡àÊÕÂÇ
+ÍÂÒ¡àÍÒË­Ô§
+ÍÑ³±Ð
+ÍÑ´¶ÑèÇ´Ó
+ÍÒÂÊÒ´
+ÍÒÂàªÕéÂ
+ÍÕ ªÒµÔËÁÒ
+ÍÕ áÃ´
+ÍÕ_´Í¡ 
+ÍÕ¡ÃÐËÃÕè
+ÍÕ¡ÐËÃÕ
+ÍÕªÒµÔªÑéÇ
+ÍÕªéÒ§àÂê´
+ÍÕ´ Í¡
+ÍÕ´-Í¡
+ÍÕ´/Í¡
+ÍÕ´Í¡
+ÍÕµÑÇ
+ÍÕµØê´
+ÍÕºéÒ
+ÍÕÁÐ¢ÇÔ´
+ÍÕÅÙ¡¡ÃÐËÃÕè
+ÍÕÇÍ¡
+ÍÕÊÑ´
+ÍÕÊÑµÇì
+ÍÕÊÒ´
+ÍÕËÍÂ
+ÍÕËÍÂ´Í§
+ÍÕËÑÇÊÓÃÍ¡
+ÍÕËÒ
+ÍÕËèÒ
+ÍÕËèÒÃÒ¡
+ÍÕÍÑº»ÃÕ
+ÍÕà´ÕÂ´
+ÍÕà»Ãµ
+ÍÕà»ç§ÊØ´Ò
+ÍÕàÅÇ
+ÍÕàÇ¹
+ÍÕàÇÃ
+ÍÕàËç´Ê´
+ÍÕàÎÕéÂ
+ÍÕáµ´àºÕéÂÇ
+ÍÕáµÃ´
+ÍÕáÁ§´Ò
+ÍÕáÃ´
+ÍÕâ§è
+ÍÕä¾Ãè
+ÍèÍ¹ÊÑ´
+ÍèÍ¹ÊÑµÇì
+ÍéÒÂ¿ÒÂ
+ÍéÒÂÊÑ´
+ÍéÒÂÊÑµÇì
+ÍéÒÂÊÒ´
+ÍéÒÂÊÒ´ËÁÒ
+ÍéÒÂËèÒ
+ÍéÒÂà Ç Ã
+ÍéÒÂàË-ÃÕéÂ
+ÍéÒÂàËÃÕéÂ
+à Âç ´
+à Âç´
+à Ê× Í ¡
+à Ë Õé Â
+à à Áè §
+à+Âç+´
+à.».Ã.µ
+à.Âç.´
+à.Âç.´.á.Áè
+à.Ê×.Í.¡
+à§ÕèÂ¹
+à§ÕéÂ¹
+à¨´áÁè
+à¨ÊáÁè
+à¨ÕêÂÇ
+à¨×Í¡
+à¨ç·áÁè
+àªèÒÇÑ¡
+à«ç¡
+à«ç¡¨Ñ´
+à«ç¡«ì
+àµÕèÂÁèÍ§ËÃÍ
+à».Ã.µ.
+à»Ãµ
+à»ç¹ ¤ Ç Â ÍÐäÃ
+àÂç ´
+àÂç.´
+àÂç´
+àÂçµ
+àÂç·
+àÂé´
+àÂê´
+àÅÇÁÒ¡
+àÅÇÊÑ´
+àÅÇÊÑµÇì
+àÅÕÂËÑÇ¹Á
+àÇÃµÐäÅ
+àÊÕÂÇ¨Ñ§
+àÊÕÂÇÇéÍÂ
+àÊ×Í¡
+àËÕéÂ
+àËÕéÂ
+àËç´Ê´
+àÍÒ¡Ñ¹»Ð
+àÍÒ·Õ´Ô
+àÍÒËÑÇ¹Á
+àÎ§«ÇÂ
+àÎÕèÂ
+àà¤Á»ÅÔé¹
+ààÁè§
+á µ ´
+á µ´
+á Ã ´
+á Ã´
+á¡è¹áµ´
+á¤Á
+á´¡
+áµ ´
+áµ´
+áÁè§
+áÁèµÒÂ
+áÁèµÒÂËÃÍä§ÇèÐ
+áÁèµÒÂàËÃÍ
+áÁèÁÃÖ§µÒÂ
+áÁèÂéÍÂ
+áÂèàÁç´
+â¤-µ-Ã
+â¤´¾èÍ
+â¤µÃ¾èÍ
+â¤µÃáÁè
+â¤Ãµ¾èÍ
+â¤Ãµ¾èÍâ¤ÃµáÁè
+â¤ÃµáÁè
+ãÍéÊÑ´
+ãÍéÊÑµ
+ä Íè
+ä Íé
+ä.Íé.ËÑ.Ç.¶.Í.¡
+ä.Íéà.ÎÕé.Â
+ä»´Ù´¹ÁáÁèä»
+ä»µÒÂ«Ð
+ä»µÒÂÊÐ
+ä»µÒÂËèÒ
+ä»ËÒÁÒÃ´Ò¤Ø³
+äÍéªÒµÔªÑèÇ
+äÍéªÒµÔËÁÒ
+äÍéªÔ§ËÁÒà¡Ô´
+äÍéªÔºËÒÂ
+äÍé´Í¡
+äÍé´ÍáËÅ¹
+äÍé·ØàÃÈ
+äÍé¹Ã¡
+äÍéºÑ´«º
+äÍé»Ò¡ËÁÒ
+äÍéÃÐÂÓ
+äÍéÅÒÇ
+äÍéÅÙ¡¡ÃÐËÃÕè
+äÍéÅÙ¡ËÁÒ
+äÍéÊÃÒ´
+äÍéÊÃÒ´´´´´´
+äÍéÊÑ¡ËÁÒ
+äÍéÊÑ´
+äÍéÊÑ´¡ÐËÁÒ
+äÍéÊÑ´ËÁÒ
+äÍéÊÑµ
+äÍéÊÑµÂì
+äÍéÊÑµÃì
+äÍéÊÑµÇ
+äÍéÊÑµÇì
+äÍéÊÑ¹´Ò¹
+äÍéÊÒ´
+äÍéÊÒÃàÅÇ
+äÍéË¹éÒ´Í
+äÍéË¹éÒ´éÒ¹
+äÍéË¹éÒµÑÇàÁÕÂ
+äÍéË¹éÒ»Ôê
+äÍéË¹éÒÁÖ¹
+äÍéË¹éÒËÁÒ
+äÍéË¹éÒâ§è
+äÍéËÍ¡
+äÍéËÍÂÂè¹
+äÍéËÑÇ¶Í¡
+äÍéËÓ
+äÍéËèÒ
+äÍéÍèÍ¹
+äÍéà´ç¡àÇÃ
+äÍéà»-Ãµ
+äÍéà»Ãµ
+äÍéàÅÇ
+äÍéàÇÃ
+äÍéàÊÕèÂÇ
+äÍéâ§è
+
+
+//--------------------------------------------------------------
+// czech [Courtesy of AZ_Online]
+language: cs_CZ
+
+buzna
+buzno
+buzny
+buzerant
+buzerante
+buzeranti
+curak
+curaku
+curaci
+dement
+demente
+dementi
+debil
+debile
+debilove
+debilni
+gay
+gayove
+hajzl
+hajzle
+hajzlove
+homous
+homousi
+homousove
+hovno
+hovna
+idiot
+idioti
+idiote
+imbecil
+imbecile
+imbecilove
+jebat
+jebani
+kreten
+kretene
+kreteni
+kurva
+kurvo
+kurvy
+krava
+kravo
+kravy
+kokot
+kokote
+kokoti
+krypl
+kryple
+kryplove
+mrdat
+mrdani
+mrdej
+namrdat
+nasrat
+nasrany
+naseru
+naser si
+neser
+oprcat
+prdel
+pica
+pico
+srat
+sracka
+ser
+seres
+svine
+teplous
+teplousi
+vymrdat
+vysrat
+vyjebat
+vole
